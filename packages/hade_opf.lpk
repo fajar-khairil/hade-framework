@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Package Version="4">
+    <Name Value="hade_opf"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="/home/fajar/projects/hade-framework/sources/hade-opf/core/;/home/fajar/projects/hade-framework/sources/hade-opf/query/"/>
+        <OtherUnitFiles Value="../sources/hade-opf/connections;../sources/hade-opf/core;../sources/hade-opf/query"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <MsgFileName Value=""/>
+        </CompilerMessages>
+        <CompilerPath Value="$(CompPath)"/>
+      </Other>
+    </CompilerOptions>
+    <Files Count="22">
+      <Item1>
+        <Filename Value="../sources/hade-opf/connections/hdsqldbbase.pas"/>
+        <UnitName Value="hdsqldbbase"/>
+      </Item1>
+      <Item2>
+        <Filename Value="../sources/hade-opf/connections/hdconnectionintf.pas"/>
+        <UnitName Value="hdconnectionintf"/>
+      </Item2>
+      <Item3>
+        <Filename Value="../sources/hade-opf/connections/hdconnection.pas"/>
+        <UnitName Value="hdconnection"/>
+      </Item3>
+      <Item4>
+        <Filename Value="../sources/hade-opf/core/hademapper.inc"/>
+        <Type Value="Include"/>
+      </Item4>
+      <Item5>
+        <Filename Value="../sources/hade-opf/core/hademapperintf.inc"/>
+        <Type Value="Include"/>
+      </Item5>
+      <Item6>
+        <Filename Value="../sources/hade-opf/core/hdbroker.pas"/>
+        <UnitName Value="hdbroker"/>
+      </Item6>
+      <Item7>
+        <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
+        <UnitName Value="hdmapper"/>
+      </Item7>
+      <Item8>
+        <Filename Value="../sources/hade-opf/core/hdopfmanager.pas"/>
+        <UnitName Value="hdopfmanager"/>
+      </Item8>
+      <Item9>
+        <Filename Value="../sources/hade-opf/query/hdquery.pas"/>
+        <UnitName Value="hdquery"/>
+      </Item9>
+      <Item10>
+        <Filename Value="../sources/hade-opf/query/hdquerybuilder.pas"/>
+        <UnitName Value="hdquerybuilder"/>
+      </Item10>
+      <Item11>
+        <Filename Value="../sources/hade-opf/query/hdquerybuilderintf.pas"/>
+        <UnitName Value="hdquerybuilderintf"/>
+      </Item11>
+      <Item12>
+        <Filename Value="../sources/hade-opf/query/hdqueryintf.pas"/>
+        <UnitName Value="hdqueryintf"/>
+      </Item12>
+      <Item13>
+        <Filename Value="../sources/hade-opf/query/hdsqldbquery.pas"/>
+        <UnitName Value="hdsqldbquery"/>
+      </Item13>
+      <Item14>
+        <Filename Value="../sources/hade-opf/core/hddatabase.pas"/>
+        <UnitName Value="hddatabase"/>
+      </Item14>
+      <Item15>
+        <Filename Value="../sources/hade-opf/core/hdimplementorintf.pas"/>
+        <UnitName Value="hdimplementorintf"/>
+      </Item15>
+      <Item16>
+        <Filename Value="../sources/hade-opf/core/hdsqldbimplementor.pas"/>
+        <UnitName Value="hdsqldbimplementor"/>
+      </Item16>
+      <Item17>
+        <Filename Value="../sources/hade-opf/core/hdqueryobjectfactoryintf.pas"/>
+        <UnitName Value="hdqueryobjectfactoryintf"/>
+      </Item17>
+      <Item18>
+        <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
+        <UnitName Value="hdobjectfactory"/>
+      </Item18>
+      <Item19>
+        <Filename Value="../sources/hade-opf/core/hdimplementor.pas"/>
+        <UnitName Value="hdimplementor"/>
+      </Item19>
+      <Item20>
+        <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
+        <UnitName Value="hdcriteria"/>
+      </Item20>
+      <Item21>
+        <Filename Value="../sources/hade-opf/core/hdobject.pas"/>
+        <UnitName Value="hdobject"/>
+      </Item21>
+      <Item22>
+        <Filename Value="../sources/hade-opf/core/hdpersistentintf.pas"/>
+        <UnitName Value="hdpersistentintf"/>
+      </Item22>
+    </Files>
+    <Type Value="RunAndDesignTime"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="hade_common"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
