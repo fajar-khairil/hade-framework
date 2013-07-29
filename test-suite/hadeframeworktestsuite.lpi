@@ -26,7 +26,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="hade_opf/tests"/>
+            <OtherUnitFiles Value="hade_opf"/>
             <UnitOutputDirectory Value="lib"/>
           </SearchPaths>
           <CodeGeneration>
@@ -103,77 +103,52 @@
         <PackageName Value="FCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="14">
+    <Units Count="9">
       <Unit0>
         <Filename Value="hadeframeworktestsuite.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="hadeframeworktestsuite"/>
       </Unit0>
       <Unit1>
-        <Filename Value="hade_opf/tests/testhadeobject.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testhadeobject"/>
-      </Unit1>
-      <Unit2>
-        <Filename Value="hade_opf/tests/testdatabase.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testdatabase"/>
-      </Unit2>
-      <Unit3>
-        <Filename Value="hade_opf/tests/testhadequery.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testhadequery"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="hade_opf/tests/testquerybuilder.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testquerybuilder"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="hade_opf/tests/testconnection.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testconnection"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="hade_opf/tests/testmapper.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testmapper"/>
-      </Unit6>
-      <Unit7>
         <Filename Value="testinit.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testinit"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="hade_opf/tests/testcustomcriteria.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testcustomcriteria"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="hade_opf/tests/testcustomselect.pas"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="hade_opf/testcustomselect.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustomselect"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="hade_opf/tests/testcustominsert.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testcustominsert"/>
-      </Unit10>
-      <Unit11>
-        <Filename Value="hade_opf/tests/testcustomupdate.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testcustomupdate"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="hade_opf/tests/testcustomdelete.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="testcustomdelete"/>
-      </Unit12>
-      <Unit13>
-        <Filename Value="hade_opf/tests/testcriteria.pas"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="hade_opf/testcriteria.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcriteria"/>
-      </Unit13>
+      </Unit3>
+      <Unit4>
+        <Filename Value="hade_opf/testcustomcriteria.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testcustomcriteria"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="hade_opf/testdatabase.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testdatabase"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="hade_opf/testconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testconnection"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="hade_opf/testcustomdelete.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testcustomdelete"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="hade_opf/testhadeobject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testhadeobject"/>
+      </Unit8>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -22,7 +22,7 @@ uses
   testcustominsert,
   testcustomupdate,
   testcustomdelete,
-  hdopfmanager, testcriteria;
+  hdopfmanager, testcriteria, testconnection;
 
 begin
   Application.Initialize;
