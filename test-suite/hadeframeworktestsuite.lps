@@ -3,21 +3,21 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="debug"/>
-    <Units Count="150">
+    <Units Count="153">
       <Unit0>
         <Filename Value="hadeframeworktestsuite.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="hadeframeworktestsuite"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="8"/>
-        <CursorPos X="5" Y="17"/>
+        <TopLine Value="27"/>
+        <CursorPos X="17" Y="51"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="hade_opf/tests/testhadeobject.pas"/>
         <UnitName Value="testhadeobject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="12"/>
         <CursorPos X="3" Y="60"/>
@@ -26,7 +26,6 @@
       <Unit2>
         <Filename Value="hade_opf/tests/testdatabase.pas"/>
         <UnitName Value="testdatabase"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="209"/>
         <CursorPos X="59" Y="215"/>
@@ -35,7 +34,6 @@
       <Unit3>
         <Filename Value="hade_opf/tests/testhadequery.pas"/>
         <UnitName Value="testhadequery"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="27" Y="68"/>
@@ -44,7 +42,6 @@
       <Unit4>
         <Filename Value="hade_opf/tests/testquerybuilder.pas"/>
         <UnitName Value="testquerybuilder"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="200"/>
         <CursorPos X="39" Y="202"/>
@@ -53,7 +50,6 @@
       <Unit5>
         <Filename Value="hade_opf/tests/testconnection.pas"/>
         <UnitName Value="testconnection"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="16"/>
         <CursorPos X="12" Y="24"/>
@@ -62,7 +58,6 @@
       <Unit6>
         <Filename Value="hade_opf/tests/testmapper.pas"/>
         <UnitName Value="testmapper"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="133"/>
         <CursorPos X="28" Y="145"/>
@@ -72,16 +67,16 @@
         <Filename Value="testinit.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testinit"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="85"/>
-        <CursorPos X="22" Y="97"/>
+        <TopLine Value="115"/>
+        <CursorPos X="41" Y="117"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="hade_opf/tests/testcustomcriteria.pas"/>
         <UnitName Value="testcustomcriteria"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="6"/>
         <CursorPos X="22" Y="19"/>
@@ -90,7 +85,6 @@
       <Unit9>
         <Filename Value="hade_opf/tests/testcustomselect.pas"/>
         <UnitName Value="testcustomselect"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="71"/>
         <CursorPos X="11" Y="82"/>
@@ -99,7 +93,6 @@
       <Unit10>
         <Filename Value="hade_opf/tests/testcustominsert.pas"/>
         <UnitName Value="testcustominsert"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="7" Y="21"/>
@@ -108,7 +101,6 @@
       <Unit11>
         <Filename Value="hade_opf/tests/testcustomupdate.pas"/>
         <UnitName Value="testcustomupdate"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="5" Y="11"/>
@@ -117,7 +109,6 @@
       <Unit12>
         <Filename Value="hade_opf/tests/testcustomdelete.pas"/>
         <UnitName Value="testcustomdelete"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="67" Y="40"/>
@@ -126,7 +117,6 @@
       <Unit13>
         <Filename Value="hade_opf/tests/testcriteria.pas"/>
         <UnitName Value="testcriteria"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="45"/>
         <CursorPos X="50" Y="41"/>
@@ -135,7 +125,6 @@
       <Unit14>
         <Filename Value="tests/testconnection.pas"/>
         <UnitName Value="testconnection"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="24"/>
         <CursorPos X="54" Y="36"/>
@@ -144,7 +133,6 @@
       <Unit15>
         <Filename Value="tests/testmapper.pas"/>
         <UnitName Value="testmapper"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="122"/>
         <CursorPos X="43" Y="179"/>
@@ -153,7 +141,6 @@
       <Unit16>
         <Filename Value="tests/testhadeobject.pas"/>
         <UnitName Value="testhadeobject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="130"/>
         <CursorPos X="1" Y="145"/>
@@ -162,7 +149,6 @@
       <Unit17>
         <Filename Value="tests/testquerybuilder.pas"/>
         <UnitName Value="testquerybuilder"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="145"/>
         <CursorPos X="65" Y="202"/>
@@ -171,7 +157,6 @@
       <Unit18>
         <Filename Value="tests/testdatabase.pas"/>
         <UnitName Value="testdatabase"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="30" Y="73"/>
@@ -180,7 +165,6 @@
       <Unit19>
         <Filename Value="tests/testhadequery.pas"/>
         <UnitName Value="testhadequery"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="26" Y="27"/>
@@ -189,7 +173,6 @@
       <Unit20>
         <Filename Value="../src/core/hdobject.pas"/>
         <UnitName Value="hdobject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="358"/>
         <CursorPos X="11" Y="220"/>
@@ -198,7 +181,6 @@
       <Unit21>
         <Filename Value="../src/core/hdmapper.pas"/>
         <UnitName Value="hdmapper"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="3"/>
@@ -207,7 +189,6 @@
       <Unit22>
         <Filename Value="../src/core/hdpersistentintf.pas"/>
         <UnitName Value="hdpersistentintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -216,7 +197,6 @@
       <Unit23>
         <Filename Value="../src/query/hdqueryintf.pas"/>
         <UnitName Value="hdqueryintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="3" Y="17"/>
@@ -225,7 +205,6 @@
       <Unit24>
         <Filename Value="../src/query/hdsqldbquery.pas"/>
         <UnitName Value="hdsqldbquery"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="157"/>
         <CursorPos X="17" Y="179"/>
@@ -234,7 +213,6 @@
       <Unit25>
         <Filename Value="../src/query/hdquerybuilder.pas"/>
         <UnitName Value="hdquerybuilder"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="64"/>
         <CursorPos X="18" Y="71"/>
@@ -243,7 +221,6 @@
       <Unit26>
         <Filename Value="../src/core/hddatabase.pas"/>
         <UnitName Value="hddatabase"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="90"/>
         <CursorPos X="17" Y="124"/>
@@ -252,7 +229,6 @@
       <Unit27>
         <Filename Value="../src/query/hdqueryproccessor.pas"/>
         <UnitName Value="hdqueryproccessor"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="74" Y="2"/>
@@ -261,7 +237,6 @@
       <Unit28>
         <Filename Value="../src/query/hdsqldbobjectfactory.pas"/>
         <UnitName Value="hdsqldbobjectfactory"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="76"/>
         <CursorPos X="75" Y="68"/>
@@ -269,7 +244,6 @@
       </Unit28>
       <Unit29>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/classesh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1776"/>
         <CursorPos X="3" Y="1722"/>
@@ -277,7 +251,6 @@
       </Unit29>
       <Unit30>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/objpash.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="180"/>
         <CursorPos X="23" Y="193"/>
@@ -285,7 +258,6 @@
       </Unit30>
       <Unit31>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/objpas.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="818"/>
         <CursorPos X="11" Y="814"/>
@@ -293,7 +265,6 @@
       </Unit31>
       <Unit32>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/persist.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="1" Y="43"/>
@@ -301,7 +272,6 @@
       </Unit32>
       <Unit33>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/stringl.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="794"/>
         <CursorPos X="3" Y="804"/>
@@ -309,7 +279,6 @@
       </Unit33>
       <Unit34>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/datih.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="101"/>
         <CursorPos X="10" Y="114"/>
@@ -317,7 +286,6 @@
       </Unit34>
       <Unit35>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/sysinth.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="66"/>
         <CursorPos X="1" Y="56"/>
@@ -326,7 +294,6 @@
       <Unit36>
         <Filename Value="../src/query/hdquerybuilderintf.pas"/>
         <UnitName Value="hdquerybuilderintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="20" Y="3"/>
@@ -335,16 +302,14 @@
       <Unit37>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/base/db.pas"/>
         <UnitName Value="db"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1630"/>
-        <CursorPos X="14" Y="1642"/>
-        <UsageCount Value="2"/>
+        <TopLine Value="1892"/>
+        <CursorPos X="22" Y="1904"/>
+        <UsageCount Value="10"/>
       </Unit37>
       <Unit38>
         <Filename Value="../src/core/hdrtti.pas"/>
         <UnitName Value="hdrtti"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="34" Y="159"/>
@@ -353,7 +318,6 @@
       <Unit39>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/typinfo.pp"/>
         <UnitName Value="typinfo"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="376"/>
         <CursorPos X="11" Y="389"/>
@@ -361,7 +325,6 @@
       </Unit39>
       <Unit40>
         <Filename Value="../src/query/hdquerybuilderselect.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="541"/>
         <CursorPos X="76" Y="27"/>
@@ -369,7 +332,6 @@
       </Unit40>
       <Unit41>
         <Filename Value="../../../bin/person.json"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="126" Y="1"/>
@@ -379,7 +341,6 @@
       <Unit42>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiObject.pas"/>
         <UnitName Value="tiObject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="35"/>
         <CursorPos X="3" Y="47"/>
@@ -388,7 +349,6 @@
       <Unit43>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiVisitor.pas"/>
         <UnitName Value="tiVisitor"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="214"/>
@@ -397,7 +357,6 @@
       <Unit44>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiBaseObject.pas"/>
         <UnitName Value="tiBaseObject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="3" Y="16"/>
@@ -406,7 +365,6 @@
       <Unit45>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiRTTI.pas"/>
         <UnitName Value="tiRTTI"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="208"/>
         <CursorPos X="1" Y="1"/>
@@ -414,7 +372,6 @@
       </Unit45>
       <Unit46>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiPersistenceLayersImpl.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -423,7 +380,6 @@
       <Unit47>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Core/tiPersistenceLayers.pas"/>
         <UnitName Value="tiPersistenceLayers"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="151"/>
         <CursorPos X="1" Y="1"/>
@@ -432,7 +388,6 @@
       <Unit48>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/variants.pp"/>
         <UnitName Value="variants"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2901"/>
         <CursorPos X="10" Y="2913"/>
@@ -440,16 +395,14 @@
       </Unit48>
       <Unit49>
         <Filename Value="../../../bin/person.sql"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="151" Y="20"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="SQL"/>
       </Unit49>
       <Unit50>
         <Filename Value="../../../bin/scheme_person.sql"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="29" Y="8"/>
@@ -459,7 +412,6 @@
       <Unit51>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/base/sqlscript.pp"/>
         <UnitName Value="sqlscript"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="5" Y="48"/>
@@ -467,7 +419,6 @@
       </Unit51>
       <Unit52>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/streams.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="432"/>
         <CursorPos X="5" Y="438"/>
@@ -475,7 +426,6 @@
       </Unit52>
       <Unit53>
         <Filename Value="../../../bin/tmp.sql"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="2"/>
@@ -484,7 +434,6 @@
       </Unit53>
       <Unit54>
         <Filename Value="../../../Documents/example_firebird_sqlcreate.sql"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="14"/>
@@ -493,17 +442,15 @@
       </Unit54>
       <Unit55>
         <Filename Value="../../../bin/ibperson_scheme.sql"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="102" Y="3"/>
-        <UsageCount Value="4"/>
+        <CursorPos X="115" Y="12"/>
+        <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="SQL"/>
       </Unit55>
       <Unit56>
         <Filename Value="../../../repos/lazarus/trunk/components/fpcunit/guitestrunner.pas"/>
         <UnitName Value="GuiTestRunner"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="717"/>
         <CursorPos X="1" Y="732"/>
@@ -512,7 +459,6 @@
       <Unit57>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-base/src/syncobjs.pp"/>
         <UnitName Value="syncobjs"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="3" Y="110"/>
@@ -521,7 +467,6 @@
       <Unit58>
         <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
         <UnitName Value="hdmapper"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="27"/>
         <CursorPos X="7" Y="42"/>
@@ -529,7 +474,6 @@
       </Unit58>
       <Unit59>
         <Filename Value="../sources/hade-opf/core/hademapperintf.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
         <CursorPos X="65" Y="51"/>
@@ -537,7 +481,6 @@
       </Unit59>
       <Unit60>
         <Filename Value="../sources/hade-opf/core/hademapper.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="114"/>
         <CursorPos X="3" Y="119"/>
@@ -546,16 +489,16 @@
       <Unit61>
         <Filename Value="../sources/hade-opf/core/hddatabase.pas"/>
         <UnitName Value="hddatabase"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="185"/>
-        <CursorPos X="1" Y="200"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
         <UsageCount Value="39"/>
+        <Loaded Value="True"/>
       </Unit61>
       <Unit62>
         <Filename Value="../sources/hade-opf/query/hdqueryintf.pas"/>
         <UnitName Value="hdqueryintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="24"/>
         <CursorPos X="28" Y="42"/>
@@ -564,7 +507,6 @@
       <Unit63>
         <Filename Value="../sources/hade-common/hdobject.pas"/>
         <UnitName Value="hdobject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="515"/>
         <CursorPos X="1" Y="572"/>
@@ -573,7 +515,6 @@
       <Unit64>
         <Filename Value="../sources/hade-opf/query/hdquery.pas"/>
         <UnitName Value="hdquery"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="92"/>
         <CursorPos X="22" Y="99"/>
@@ -581,7 +522,6 @@
       </Unit64>
       <Unit65>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/collect.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="346"/>
         <CursorPos X="3" Y="354"/>
@@ -589,7 +529,6 @@
       </Unit65>
       <Unit66>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/dm.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="77"/>
         <CursorPos X="3" Y="113"/>
@@ -597,7 +536,6 @@
       </Unit66>
       <Unit67>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/classes.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="867"/>
         <CursorPos X="3" Y="879"/>
@@ -605,7 +543,6 @@
       </Unit67>
       <Unit68>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/classes/parser.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="3" Y="19"/>
@@ -614,7 +551,6 @@
       <Unit69>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/types.pp"/>
         <UnitName Value="types"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="328"/>
         <CursorPos X="10" Y="342"/>
@@ -624,24 +560,24 @@
         <Filename Value="../sources/hade-opf/connections/hdsqldbbase.pas"/>
         <UnitName Value="hdsqldbbase"/>
         <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="200"/>
-        <CursorPos X="35" Y="206"/>
-        <UsageCount Value="7"/>
+        <TopLine Value="181"/>
+        <CursorPos X="6" Y="193"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit70>
       <Unit71>
         <Filename Value="../sources/hade-opf/connections/hdconnection.pas"/>
         <UnitName Value="hdconnection"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="88"/>
+        <TopLine Value="23"/>
         <CursorPos X="3" Y="23"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="10"/>
       </Unit71>
       <Unit72>
         <Filename Value="../sources/hade-opf/core/hdbroker.pas"/>
         <UnitName Value="hdbroker"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="5" Y="12"/>
@@ -650,7 +586,6 @@
       <Unit73>
         <Filename Value="../sources/hade-opf/query/hdsqldbobjectfactory.pas"/>
         <UnitName Value="hdsqldbobjectfactory"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="42" Y="115"/>
@@ -659,7 +594,6 @@
       <Unit74>
         <Filename Value="../sources/hade-common/hdrtti.pas"/>
         <UnitName Value="hdrtti"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="272"/>
         <CursorPos X="5" Y="295"/>
@@ -668,7 +602,6 @@
       <Unit75>
         <Filename Value="../sources/hade-opf/query/hdsqldbquery.pas"/>
         <UnitName Value="hdsqldbquery"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="7"/>
         <CursorPos X="1" Y="48"/>
@@ -676,7 +609,6 @@
       </Unit75>
       <Unit76>
         <Filename Value="../sources/hade-opf/query/hdquerybuilderselect.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="137"/>
         <CursorPos X="5" Y="167"/>
@@ -684,7 +616,6 @@
       </Unit76>
       <Unit77>
         <Filename Value="../sources/hade-opf/query/hdquerybuilderdelete.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -692,7 +623,6 @@
       </Unit77>
       <Unit78>
         <Filename Value="../sources/hade-opf/query/hdquerybuilderupdate.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -701,7 +631,6 @@
       <Unit79>
         <Filename Value="../sources/hade-opf/query/hdquerybuilder.pas"/>
         <UnitName Value="hdquerybuilder"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="48"/>
         <CursorPos X="15" Y="61"/>
@@ -710,7 +639,6 @@
       <Unit80>
         <Filename Value="../sources/hade-opf/query/hdqueryobjectfactoryintf.pas"/>
         <UnitName Value="hdqueryobjectfactoryintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="85" Y="21"/>
@@ -719,7 +647,6 @@
       <Unit81>
         <Filename Value="../sources/hade-opf/query/hdquerybuilderintf.pas"/>
         <UnitName Value="hdquerybuilderintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="114"/>
         <CursorPos X="26" Y="123"/>
@@ -728,7 +655,6 @@
       <Unit82>
         <Filename Value="../sources/hade-common/hdutils.pas"/>
         <UnitName Value="hdutils"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="98"/>
         <CursorPos X="29" Y="112"/>
@@ -737,7 +663,6 @@
       <Unit83>
         <Filename Value="../sources/hade-common/hdpersistentintf.pas"/>
         <UnitName Value="hdpersistentintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="12" Y="10"/>
@@ -746,7 +671,6 @@
       <Unit84>
         <Filename Value="../sources/hade-opf/query/hdsqldbimplementor.pas"/>
         <UnitName Value="hdsqldbimplementor"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="307"/>
         <CursorPos X="50" Y="317"/>
@@ -755,7 +679,6 @@
       <Unit85>
         <Filename Value="../sources/hade-opf/core/hdimplementorintf.pas"/>
         <UnitName Value="hdimplementorintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="111"/>
         <CursorPos X="3" Y="114"/>
@@ -763,7 +686,6 @@
       </Unit85>
       <Unit86>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/varianth.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="486"/>
         <CursorPos X="21" Y="510"/>
@@ -772,7 +694,6 @@
       <Unit87>
         <Filename Value="../sources/hade-opf/query/hdqueryobjectfactory.pas"/>
         <UnitName Value="hdqueryobjectfactory"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="14"/>
         <CursorPos X="56" Y="33"/>
@@ -781,7 +702,6 @@
       <Unit88>
         <Filename Value="../../../repos/lazarus/trunk/lcl/interfacebase.pp"/>
         <UnitName Value="InterfaceBase"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="27" Y="4"/>
@@ -789,7 +709,6 @@
       </Unit88>
       <Unit89>
         <Filename Value="../sources/hade-opf/query/backup/hdqueryproccessor (copy).pas"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="12"/>
         <CursorPos X="5" Y="25"/>
@@ -798,7 +717,6 @@
       <Unit90>
         <Filename Value="../../../repos/lazarus/trunk/lcl/lclintf.pas"/>
         <UnitName Value="LCLIntf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="36"/>
         <CursorPos X="1" Y="1"/>
@@ -806,7 +724,6 @@
       </Unit90>
       <Unit91>
         <Filename Value="../../../repos/lazarus/trunk/lcl/include/lclintf.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
         <CursorPos X="10" Y="35"/>
@@ -814,7 +731,6 @@
       </Unit91>
       <Unit92>
         <Filename Value="../../../repos/lazarus/trunk/lcl/include/lclintfh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="21"/>
         <CursorPos X="48" Y="34"/>
@@ -822,7 +738,6 @@
       </Unit92>
       <Unit93>
         <Filename Value="../../../repos/lazarus/trunk/lcl/include/intfbaselcl.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="10"/>
         <CursorPos X="36" Y="23"/>
@@ -831,7 +746,6 @@
       <Unit94>
         <Filename Value="../../../fpc-packages/lnet/lib/lnet.pp"/>
         <UnitName Value="lNet"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
         <CursorPos X="3" Y="74"/>
@@ -840,7 +754,6 @@
       <Unit95>
         <Filename Value="../../../fpc-packages/lnet/lib/levents.pp"/>
         <UnitName Value="lEvents"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="191"/>
         <CursorPos X="3" Y="204"/>
@@ -849,7 +762,6 @@
       <Unit96>
         <Filename Value="../../../fpc-packages/lnet/lib/lprocess.pp"/>
         <UnitName Value="lProcess"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="1" Y="1"/>
@@ -858,7 +770,6 @@
       <Unit97>
         <Filename Value="../../../fpc-packages/lnet/lib/ltimer.pp"/>
         <UnitName Value="ltimer"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="37"/>
         <CursorPos X="3" Y="73"/>
@@ -867,7 +778,6 @@
       <Unit98>
         <Filename Value="../../../fpc-packages/lnet/lib/lcommon.pp"/>
         <UnitName Value="lCommon"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -876,7 +786,6 @@
       <Unit99>
         <Filename Value="../../../fpc-packages/luipack/luicomponents/register_luilclcomponents.pas"/>
         <UnitName Value="register_luilclcomponents"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2"/>
         <CursorPos X="1" Y="1"/>
@@ -885,7 +794,6 @@
       <Unit100>
         <Filename Value="../../../fpc-packages/luipack/luicomponents/luijsonlazreport.pas"/>
         <UnitName Value="LuiJSONLazReport"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="34"/>
         <CursorPos X="1" Y="1"/>
@@ -894,7 +802,6 @@
       <Unit101>
         <Filename Value="../../../fpc-packages/luipack/vtvextras/vtvutils/vtjson.pas"/>
         <UnitName Value="VTJSON"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="701"/>
         <CursorPos X="1" Y="713"/>
@@ -903,7 +810,6 @@
       <Unit102>
         <Filename Value="../../../fpc-packages/luipack/vtvextras/virtualdbgrid/VirtualDBGrid.pas"/>
         <UnitName Value="VirtualDBGrid"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2435"/>
         <CursorPos X="41" Y="2460"/>
@@ -912,7 +818,6 @@
       <Unit103>
         <Filename Value="../../../fpc-packages/lazarus-ccr/svn/components/virtualtreeview-new/trunk/VirtualTrees.pas"/>
         <UnitName Value="VirtualTrees"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="895"/>
         <CursorPos X="5" Y="907"/>
@@ -920,7 +825,6 @@
       </Unit103>
       <Unit104>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/base/fields.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="3298"/>
         <CursorPos X="3" Y="3307"/>
@@ -929,16 +833,16 @@
       <Unit105>
         <Filename Value="../sources/hade-opf/core/hdimplementor.pas"/>
         <UnitName Value="hdimplementor"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="60"/>
-        <CursorPos X="1" Y="164"/>
+        <TopLine Value="111"/>
+        <CursorPos X="1" Y="122"/>
         <UsageCount Value="19"/>
+        <Loaded Value="True"/>
       </Unit105>
       <Unit106>
         <Filename Value="../sources/hade-opf/core/hdopfmanager.pas"/>
         <UnitName Value="hdopfmanager"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -947,7 +851,6 @@
       <Unit107>
         <Filename Value="../sources/hade-opf/core/hdimplementormanager.pas"/>
         <UnitName Value="hdimplementormanager"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -956,7 +859,6 @@
       <Unit108>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-json/src/fpjson.pp"/>
         <UnitName Value="fpjson"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2173"/>
         <CursorPos X="3" Y="2183"/>
@@ -964,7 +866,6 @@
       </Unit108>
       <Unit109>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/sysstrh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="70"/>
         <CursorPos X="21" Y="84"/>
@@ -972,7 +873,6 @@
       </Unit109>
       <Unit110>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/sysstr.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="464"/>
         <CursorPos X="5" Y="469"/>
@@ -980,7 +880,6 @@
       </Unit110>
       <Unit111>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/intfh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="11"/>
         <CursorPos X="24" Y="25"/>
@@ -988,7 +887,6 @@
       </Unit111>
       <Unit112>
         <Filename Value="../../../repos/fpc/trunk/rtl/objpas/sysutils/sysuintf.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="46"/>
         <CursorPos X="10" Y="56"/>
@@ -997,7 +895,6 @@
       <Unit113>
         <Filename Value="../../../repos/fpc/trunk/packages/hash/src/uuid.pas"/>
         <UnitName Value="uuid"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="3" Y="71"/>
@@ -1006,7 +903,6 @@
       <Unit114>
         <Filename Value="../sources/hade-common/hdguid.pas"/>
         <UnitName Value="hdguid"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -1015,7 +911,6 @@
       <Unit115>
         <Filename Value="../../../Documents/moduleloader/Robert/TEST/ModuleLoader.pas"/>
         <UnitName Value="ModuleLoader"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="261"/>
         <CursorPos X="1" Y="1"/>
@@ -1024,16 +919,14 @@
       <Unit116>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/sqldb/sqldb.pp"/>
         <UnitName Value="sqldb"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="171"/>
-        <CursorPos X="14" Y="184"/>
-        <UsageCount Value="5"/>
+        <TopLine Value="167"/>
+        <CursorPos X="14" Y="179"/>
+        <UsageCount Value="10"/>
       </Unit116>
       <Unit117>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/base/bufdataset.pas"/>
         <UnitName Value="BufDataset"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="433"/>
         <CursorPos X="3" Y="397"/>
@@ -1042,7 +935,6 @@
       <Unit118>
         <Filename Value="../sources/hade-opf/core/hdsqldbimplementor.pas"/>
         <UnitName Value="hdsqldbimplementor"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="99"/>
         <CursorPos X="44" Y="116"/>
@@ -1051,7 +943,6 @@
       <Unit119>
         <Filename Value="../packages/hade_opf.pas"/>
         <UnitName Value="hade_opf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -1060,7 +951,6 @@
       <Unit120>
         <Filename Value="../../../fpc-packages/lazarus-ccr/svn/components/spktoolbar/SpkGUITools/SpkGUITools.pas"/>
         <UnitName Value="SpkGUITools"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="1" Y="1"/>
@@ -1069,7 +959,6 @@
       <Unit121>
         <Filename Value="../../../fpc-packages/press-sdk/Source/Core/PressExpression.pas"/>
         <UnitName Value="PressExpression"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="133"/>
         <CursorPos X="41" Y="147"/>
@@ -1078,7 +967,6 @@
       <Unit122>
         <Filename Value="../../../fpc-packages/press-sdk/Source/Core/PressExpressionLib.pas"/>
         <UnitName Value="PressExpressionLib"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="19"/>
         <CursorPos X="1" Y="1"/>
@@ -1087,7 +975,6 @@
       <Unit123>
         <Filename Value="../../../fpc-packages/press-sdk/Source/Core/PressOQL.pas"/>
         <UnitName Value="PressOQL"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="96"/>
         <CursorPos X="3" Y="110"/>
@@ -1096,7 +983,6 @@
       <Unit124>
         <Filename Value="../../../fpc-packages/press-sdk/Source/Core/PressParser.pas"/>
         <UnitName Value="PressParser"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="560"/>
         <CursorPos X="3" Y="59"/>
@@ -1105,7 +991,6 @@
       <Unit125>
         <Filename Value="../../../fpc-packages/FPC_StringBuiler/Src/StringBuilderUnit.pas"/>
         <UnitName Value="StringBuilderUnit"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="120"/>
         <CursorPos X="1" Y="1"/>
@@ -1114,7 +999,6 @@
       <Unit126>
         <Filename Value="../thirdparty/StringBuilderUnit.pas"/>
         <UnitName Value="StringBuilderUnit"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="5"/>
         <CursorPos X="3" Y="18"/>
@@ -1122,7 +1006,6 @@
       </Unit126>
       <Unit127>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/systemh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="406"/>
         <CursorPos X="3" Y="425"/>
@@ -1131,7 +1014,6 @@
       <Unit128>
         <Filename Value="../sources/hade-common/hdmapbase.pas"/>
         <UnitName Value="hdmapbase"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="11"/>
         <CursorPos X="14" Y="23"/>
@@ -1139,7 +1021,6 @@
       </Unit128>
       <Unit129>
         <Filename Value="../../../repos/fpc/trunk/rtl/inc/ustringh.inc"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="18"/>
         <CursorPos X="11" Y="31"/>
@@ -1148,7 +1029,6 @@
       <Unit130>
         <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
         <UnitName Value="hdobjectfactory"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="128"/>
         <CursorPos X="1" Y="139"/>
@@ -1157,7 +1037,6 @@
       <Unit131>
         <Filename Value="../sources/hade-opf/core/hdqueryobjectfactoryintf.pas"/>
         <UnitName Value="hdqueryobjectfactoryintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="29"/>
         <CursorPos X="47" Y="34"/>
@@ -1166,7 +1045,6 @@
       <Unit132>
         <Filename Value="../sources/hade-opf/connections/hdconnectionintf.pas"/>
         <UnitName Value="hdconnectionintf"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="34" Y="20"/>
@@ -1174,7 +1052,6 @@
       </Unit132>
       <Unit133>
         <Filename Value="../.gitignore"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="30" Y="9"/>
@@ -1184,7 +1061,6 @@
       <Unit134>
         <Filename Value="../sources/hade-common/rttiunit.pas"/>
         <UnitName Value="RTTIUnit"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="73"/>
         <CursorPos X="1" Y="74"/>
@@ -1193,7 +1069,6 @@
       <Unit135>
         <Filename Value="../sources/hade-opf/core/hdqueryobjectfactory.pas"/>
         <UnitName Value="hdqueryobjectfactory"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="41" Y="34"/>
@@ -1202,7 +1077,6 @@
       <Unit136>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF2_Demos/QuickStart/GUI/FMain.pas"/>
         <UnitName Value="FMain"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
@@ -1212,7 +1086,6 @@
         <Filename Value="../../../fpc-packages/tiopf/tiOPF2_Demos/DemoGUI/tiVTListView/Unit1.pas"/>
         <HasResources Value="True"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="118"/>
         <CursorPos X="1" Y="1"/>
@@ -1221,7 +1094,6 @@
       <Unit138>
         <Filename Value="../../../repos/fpc/trunk/rtl/wince/windows.pp"/>
         <UnitName Value="windows"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="30"/>
         <CursorPos X="5" Y="42"/>
@@ -1230,7 +1102,6 @@
       <Unit139>
         <Filename Value="../../../fpc-packages/tiopf/tiOPF3/Trunk/Demos/Demo_08_Collection/FMainCollection.pas"/>
         <UnitName Value="FMainCollection"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="170"/>
         <CursorPos X="1" Y="1"/>
@@ -1239,7 +1110,6 @@
       <Unit140>
         <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
         <UnitName Value="hdcriteria"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="537"/>
         <CursorPos X="72" Y="608"/>
@@ -1248,7 +1118,6 @@
       <Unit141>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-base/src/contnrs.pp"/>
         <UnitName Value="contnrs"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="203"/>
         <CursorPos X="14" Y="217"/>
@@ -1257,7 +1126,6 @@
       <Unit142>
         <Filename Value="../sources/hade-opf/core/hdobject.pas"/>
         <UnitName Value="hdobject"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="315"/>
         <CursorPos X="5" Y="271"/>
@@ -1267,49 +1135,112 @@
         <Filename Value="hade_opf/testcustomselect.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustomselect"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="23"/>
       </Unit143>
       <Unit144>
         <Filename Value="hade_opf/testcriteria.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcriteria"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="23"/>
       </Unit144>
       <Unit145>
         <Filename Value="hade_opf/testcustomcriteria.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustomcriteria"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="23"/>
       </Unit145>
       <Unit146>
         <Filename Value="hade_opf/testdatabase.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testdatabase"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="204"/>
+        <CursorPos X="7" Y="221"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
       </Unit146>
       <Unit147>
         <Filename Value="hade_opf/testconnection.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testconnection"/>
-        <UsageCount Value="20"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="22"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="23"/>
       </Unit147>
       <Unit148>
         <Filename Value="hade_opf/testcustomdelete.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustomdelete"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="23"/>
       </Unit148>
       <Unit149>
         <Filename Value="hade_opf/testhadeobject.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testhadeobject"/>
-        <UsageCount Value="20"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="183"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="23"/>
       </Unit149>
+      <Unit150>
+        <Filename Value="../README.md"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="7"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit150>
+      <Unit151>
+        <Filename Value="../../../repos/fpc/trunk/packages/fcl-base/src/custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="74" Y="24"/>
+        <UsageCount Value="10"/>
+      </Unit151>
+      <Unit152>
+        <Filename Value="../../../repos/fpc/trunk/packages/fcl-db/src/base/database.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="474"/>
+        <CursorPos X="8" Y="477"/>
+        <UsageCount Value="10"/>
+      </Unit152>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="0" HistoryIndex="-1"/>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="hadeframeworktestsuite.lpr"/>
+        <Caret Line="27" Column="1" TopLine="8"/>
+      </Position1>
+      <Position2>
+        <Filename Value="hadeframeworktestsuite.lpr"/>
+        <Caret Line="29" Column="60" TopLine="13"/>
+      </Position2>
+      <Position3>
+        <Filename Value="hadeframeworktestsuite.lpr"/>
+        <Caret Line="32" Column="18" TopLine="13"/>
+      </Position3>
+      <Position4>
+        <Filename Value="hade_opf/testdatabase.pas"/>
+        <Caret Line="213" Column="52" TopLine="2"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../sources/hade-opf/core/hddatabase.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../sources/hade-opf/core/hdimplementor.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../sources/hade-opf/connections/hdsqldbbase.pas"/>
+        <Caret Line="189" Column="36" TopLine="181"/>
+      </Position7>
+    </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
 </CONFIG>

@@ -72,7 +72,7 @@ begin
     self.AssertEquals(23, person.Age);
     self.AssertEquals(Ord(posPK), Ord(person.Company.ObjectState));
     self.AssertEquals(1, person.Company.CompanyID);
-    Self.AssertEquals('Hade-Sofware', person.Company.Name);
+    Self.AssertEquals('Hade-Software', person.Company.Name);
     self.AssertEquals('02-03-1990', FormatDateTime('dd-mm-yyyy', person.Birthday));
   finally
     FreeAndNil(person);

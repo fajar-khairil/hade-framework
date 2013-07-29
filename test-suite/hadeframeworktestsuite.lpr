@@ -3,17 +3,17 @@ program hadeframeworktestsuite;
 {$mode objfpc}{$H+}
 
 uses
-  {$IFDEF LINUX}{$IFDEF UseCthreads}
+  {$IFDEF LINUX}
    //cmem,
    cthreads,
-  {$ENDIF}{$ENDIF}
+  {$ENDIF}
   Interfaces,
+  sysutils,
   Forms,
   GUITestRunner,
   testhadeobject,
   testdatabase,
   testhadequery,
-  //testquerybuilder,
   //testconnection,
   testmapper,
   testinit,
@@ -22,14 +22,32 @@ uses
   testcustominsert,
   testcustomupdate,
   testcustomdelete,
-  hdopfmanager, testcriteria, testconnection;
+  hdopfmanager,
+  testcriteria;
+Type
 
+{ TSimpleExceptionHandler }
+
+TSimpleExceptionHandler = class
+public
+  Procedure doOnException(Sender : TObject; E : Exception);
+end;
+
+{ TSimpleExceptionHandler }
+
+procedure TSimpleExceptionHandler.doOnException(Sender: TObject; E: Exception);
 begin
+  WriteLn(E.Message);
+end;
+
+var
+  EHandler: TSimpleExceptionHandler;
+begin
+  EHandler:= TSimpleExceptionHandler.Create;
   Application.Initialize;
   Application.CreateForm(TGuiTestRunner, TestRunner);
-  {$IFDEF UseCthreads}
-    WriteLn('UseCthreads!');
-  {$ENDIF}
+  Application.OnException:= @EHandler.doOnException;
   Application.Run;
+  EHandler.Free;
 end.
 

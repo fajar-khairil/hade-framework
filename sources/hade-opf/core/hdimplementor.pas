@@ -78,7 +78,6 @@ begin
   if Assigned(ACriteria) then
     AImplementor.Query.SQL.Add(ACriteria.GetClause);
 
-  WriteLn(AImplementor.Query.SQL.Text);
   AImplementor.Query.Open;
 end;
 
@@ -121,7 +120,6 @@ begin
     end;
   end;
 
-  WriteLn(implementor.Query.SQL.Text);
   IHadeObject(AObject).MarkClean;
 end;
 

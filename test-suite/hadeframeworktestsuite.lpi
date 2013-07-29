@@ -54,7 +54,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="hade_opf/tests"/>
+            <OtherUnitFiles Value="hade_opf"/>
             <UnitOutputDirectory Value="lib"/>
           </SearchPaths>
           <CodeGeneration>
