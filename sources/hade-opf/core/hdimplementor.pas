@@ -32,7 +32,6 @@ Type
     procedure ApplyUpdate(AObject:THadeObjectList);
 
     constructor Create(AConnection:THadeConnection);
-    destructor Destroy;override;
   end;
 
 implementation
@@ -149,11 +148,6 @@ end;
 constructor THadeImplementor.Create(AConnection: THadeConnection);
 begin
   FConnection:= AConnection;
-end;
-
-destructor THadeImplementor.Destroy;
-begin
-  inherited Destroy;
 end;
 
 end.

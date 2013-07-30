@@ -9,7 +9,7 @@ uses
   SysUtils;
 CONST
   { MAJOR.MINOR-STATUS[a:ALPHA,b:BETA,rc:Release Candidate,f:FINAL].REVISION_NUMBER }
-  VERSION = '0.1-a.1';
+  PACKAGE_VERSION = '0.1-a.1';
   PACKAGENAME = 'Hade-Framework';
 Type
   EHadeException = class(Exception)
@@ -32,7 +32,7 @@ implementation
 
 class function THadeBaseObject.version: string;
 begin
-  Result := PACKAGENAME+' '+VERSION;
+  Result := PACKAGENAME+' '+PACKAGE_VERSION;
 end;
 
 end.

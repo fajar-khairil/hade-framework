@@ -137,10 +137,6 @@ var
   ListExpected: TStringList;
   ListResult: TStringList;
 begin
-  GHadeOPFManager.PersistenceMapper.MapClass(TSuperPerson, 'super_person', TPerson);
-  GHadeOPFManager.PersistenceMapper.MapProperties(TSuperPerson,
-    'Job', 'job', [], ftString);
-
   self.AssertEquals(ExtractFilePath(ParamStr(0))+SQLITE_DATABASE_NAME, GHadeOPFManager.PersistenceMapper.Connections.Find().Database);
   self.AssertEquals('person', GHadeOPFManager.PersistenceMapper.FindClassMap(
     'TSuperPerson').Table);
