@@ -11,7 +11,7 @@ uses
   hdopfmanager, hdquery, hdquerybuilder, hdquerybuilderintf, hdqueryintf, 
   hdsqldbquery, hddatabase, hdimplementorintf, hdsqldbimplementor, 
   hdqueryobjectfactoryintf, hdobjectfactory, hdimplementor, hdcriteria, 
-  hdobject, hdpersistentintf, LazarusPackageIntf;
+  hdobject, hdpersistentintf, hdimplementormanager, LazarusPackageIntf;
 
 implementation
 

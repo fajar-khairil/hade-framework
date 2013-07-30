@@ -8,13 +8,10 @@
         <Filename Value="hadeframeworktestsuite.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="hadeframeworktestsuite"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="7"/>
-        <CursorPos X="1" Y="27"/>
+        <TopLine Value="6"/>
+        <CursorPos X="19" Y="31"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="testinit.pas"/>
@@ -32,18 +29,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="91"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit2>
       <Unit3>
         <Filename Value="hade_opf/testcriteria.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcriteria"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="27"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="30"/>
       </Unit3>
       <Unit4>
         <Filename Value="hade_opf/testcustomcriteria.pas"/>
@@ -52,17 +47,17 @@
         <WindowIndex Value="0"/>
         <TopLine Value="140"/>
         <CursorPos X="61" Y="165"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit4>
       <Unit5>
         <Filename Value="hade_opf/testdatabase.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testdatabase"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="207"/>
-        <CursorPos X="58" Y="213"/>
-        <UsageCount Value="27"/>
+        <TopLine Value="56"/>
+        <CursorPos X="35" Y="73"/>
+        <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -72,7 +67,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="22"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit6>
       <Unit7>
         <Filename Value="hade_opf/testcustomdelete.pas"/>
@@ -81,18 +76,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="30"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="30"/>
       </Unit7>
       <Unit8>
         <Filename Value="hade_opf/testhadeobject.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testhadeobject"/>
-        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="124"/>
         <CursorPos X="59" Y="186"/>
-        <UsageCount Value="27"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="30"/>
       </Unit8>
       <Unit9>
         <Filename Value="hade_opf/tests/testhadeobject.pas"/>
@@ -536,30 +529,30 @@
         <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
         <UnitName Value="hdmapper"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="18"/>
+        <TopLine Value="19"/>
         <CursorPos X="57" Y="18"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="12"/>
       </Unit65>
       <Unit66>
         <Filename Value="../sources/hade-opf/core/hademapperintf.inc"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="40"/>
-        <CursorPos X="65" Y="51"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="31"/>
+        <CursorPos X="25" Y="51"/>
+        <UsageCount Value="11"/>
       </Unit66>
       <Unit67>
         <Filename Value="../sources/hade-opf/core/hademapper.inc"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="114"/>
-        <CursorPos X="3" Y="119"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="361"/>
+        <CursorPos X="7" Y="374"/>
+        <UsageCount Value="11"/>
       </Unit67>
       <Unit68>
         <Filename Value="../sources/hade-opf/core/hddatabase.pas"/>
         <UnitName Value="hddatabase"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="47"/>
-        <CursorPos X="3" Y="26"/>
+        <TopLine Value="17"/>
+        <CursorPos X="26" Y="73"/>
         <UsageCount Value="39"/>
       </Unit68>
       <Unit69>
@@ -710,10 +703,13 @@
       <Unit88>
         <Filename Value="../sources/hade-opf/query/hdquerybuilderintf.pas"/>
         <UnitName Value="hdquerybuilderintf"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="114"/>
-        <CursorPos X="26" Y="123"/>
+        <TopLine Value="19"/>
+        <CursorPos X="37" Y="33"/>
         <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit88>
       <Unit89>
         <Filename Value="../sources/hade-common/hdutils.pas"/>
@@ -897,8 +893,8 @@
         <Filename Value="../sources/hade-opf/core/hdimplementor.pas"/>
         <UnitName Value="hdimplementor"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="29"/>
-        <CursorPos X="21" Y="45"/>
+        <TopLine Value="34"/>
+        <CursorPos X="22" Y="15"/>
         <UsageCount Value="20"/>
       </Unit112>
       <Unit113>
@@ -906,16 +902,16 @@
         <UnitName Value="hdopfmanager"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <CursorPos X="5" Y="9"/>
+        <UsageCount Value="10"/>
       </Unit113>
       <Unit114>
         <Filename Value="../sources/hade-opf/core/hdimplementormanager.pas"/>
         <UnitName Value="hdimplementormanager"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="11"/>
+        <TopLine Value="13"/>
+        <CursorPos X="34" Y="163"/>
+        <UsageCount Value="20"/>
       </Unit114>
       <Unit115>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-json/src/fpjson.pp"/>
@@ -996,10 +992,12 @@
       <Unit125>
         <Filename Value="../sources/hade-opf/core/hdsqldbimplementor.pas"/>
         <UnitName Value="hdsqldbimplementor"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="98"/>
+        <TopLine Value="108"/>
         <CursorPos X="44" Y="116"/>
         <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit125>
       <Unit126>
         <Filename Value="../packages/hade_opf.pas"/>
@@ -1090,18 +1088,22 @@
       <Unit137>
         <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
         <UnitName Value="hdobjectfactory"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="128"/>
-        <CursorPos X="1" Y="139"/>
+        <TopLine Value="72"/>
+        <CursorPos X="3" Y="94"/>
         <UsageCount Value="12"/>
+        <Loaded Value="True"/>
       </Unit137>
       <Unit138>
         <Filename Value="../sources/hade-opf/core/hdqueryobjectfactoryintf.pas"/>
         <UnitName Value="hdqueryobjectfactoryintf"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="29"/>
-        <CursorPos X="47" Y="34"/>
+        <TopLine Value="1"/>
+        <CursorPos X="31" Y="79"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit138>
       <Unit139>
         <Filename Value="../sources/hade-opf/connections/hdconnectionintf.pas"/>
@@ -1115,7 +1117,7 @@
         <Filename Value="../.gitignore"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="10" Y="11"/>
+        <CursorPos X="12" Y="1"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit140>
@@ -1188,8 +1190,8 @@
         <Filename Value="../sources/hade-opf/core/hdobject.pas"/>
         <UnitName Value="hdobject"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="613"/>
-        <CursorPos X="3" Y="615"/>
+        <TopLine Value="643"/>
+        <CursorPos X="18" Y="655"/>
         <UsageCount Value="10"/>
       </Unit149>
       <Unit150>
@@ -1251,24 +1253,22 @@
         <Filename Value="hade_opf/testmapper.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testmapper"/>
-        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="141"/>
         <CursorPos X="50" Y="144"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="22"/>
       </Unit157>
       <Unit158>
         <Filename Value="hade_opf/testcustominsert.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustominsert"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit158>
       <Unit159>
         <Filename Value="hade_opf/testcustomupdate.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcustomupdate"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit159>
       <Unit160>
         <Filename Value="hade_opf/testquerybuilder.pas"/>
@@ -1282,7 +1282,36 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="0" HistoryIndex="-1"/>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="../sources/hade-opf/core/hdqueryobjectfactoryintf.pas"/>
+        <Caret Line="36" Column="39" TopLine="24"/>
+      </Position1>
+      <Position2>
+        <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
+        <Caret Line="22" Column="79" TopLine="8"/>
+      </Position2>
+      <Position3>
+        <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
+        <Caret Line="41" Column="30" TopLine="29"/>
+      </Position3>
+      <Position4>
+        <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
+        <Caret Line="10" Column="11" TopLine="4"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../sources/hade-opf/core/hdobjectfactory.pas"/>
+        <Caret Line="7" Column="10" TopLine="1"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../sources/hade-opf/core/hdqueryobjectfactoryintf.pas"/>
+        <Caret Line="37" Column="73" TopLine="23"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../sources/hade-opf/query/hdquerybuilderintf.pas"/>
+        <Caret Line="132" Column="52" TopLine="115"/>
+      </Position7>
+    </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
 </CONFIG>

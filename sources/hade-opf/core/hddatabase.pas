@@ -19,7 +19,7 @@ CONST
 type
   EHadeDatabaseException = class(EHadeException);
 
-  TUpdateMode = (upSkipError,upStopError);
+  THadeUpdateMode = (upSkipError,upStopError);
 
   { THadeDatabase }
 
@@ -70,7 +70,7 @@ type
     //objectlists
     procedure Read(const AObjectList:THadeObjectList;AFetchMode:TFetchMode = fcLazy);
     procedure ApplyUpdate(const AObjectList:THadeObjectList;
-      AUpdateMode:TUpdateMode = upStopError);
+      AUpdateMode:THadeUpdateMode = upStopError);
 
     function RecordsCount(ATableName:string):ptrUint;
     procedure ExecuteScripts(const AFileName:string);
@@ -197,7 +197,7 @@ begin
 end;
 
 procedure THadeDatabase.ApplyUpdate(const AObjectList: THadeObjectList;
-  AUpdateMode: TUpdateMode);
+  AUpdateMode: THadeUpdateMode);
 begin
   Self.StartTransaction();
   try

@@ -12,7 +12,8 @@ uses
   hdimplementorintf,
   hdbroker,
   hdobject;
-Type
+
+type
 
   EHadeImplManagerException = class(EHadeException);
 
@@ -23,19 +24,18 @@ Type
     FImplementorBroker: THadeBroker;
     FImplementorClass: THadeImplementorClass;
     FImplementorName: string;
-    FIsDefault: Boolean;
+    FIsDefault: boolean;
     FObjectClassName: string;
   public
-    property ImplementorName:string read FImplementorName;
-    property ObjectClassName:string read FObjectClassName;
-    property ImplementorClass:THadeImplementorClass read FImplementorClass;
-    property ImplementorBroker:THadeBroker read FImplementorBroker;
-    property IsDefault:Boolean read FIsDefault;
+    property ImplementorName: string read FImplementorName;
+    property ObjectClassName: string read FObjectClassName;
+    property ImplementorClass: THadeImplementorClass read FImplementorClass;
+    property ImplementorBroker: THadeBroker read FImplementorBroker;
+    property IsDefault: boolean read FIsDefault;
 
-    constructor Create(AImplName:string;AObjectClass:THadeObjectClass;
-                AImplClasses:THadeImplementorClass;
-                ABroker:THadeBroker;
-                ADefault:Boolean = False);
+    constructor Create(AImplName: string; AObjectClass: THadeObjectClass;
+      AImplClasses: THadeImplementorClass; ABroker: THadeBroker;
+      ADefault: boolean = False);
   end;
 
   { THadeImplementorManager }
@@ -45,58 +45,60 @@ Type
     FList: THadeMapBase;
     procedure RegisterDefaultImplementor;
   public
-    procedure RegisterImplementor(AImplName:string;
-      AObjectClass:THadeObjectClass;
-      AImplClasses:THadeImplementorClass;
-      ABroker:THadeBroker;
-      ADefault:Boolean = False);
-    procedure UnRegisterImplementor(AImplName:string);
+    procedure RegisterImplementor(AImplName: string; AObjectClass: THadeObjectClass;
+      AImplClasses: THadeImplementorClass; ABroker: THadeBroker;
+      ADefault: boolean = False);
+    procedure UnRegisterImplementor(AImplName: string);
 
-    function GetByName(AImplName:string):THadeImplementorClass;
-    function GetByClassName(AClassName:string):THadeImplementorClass;
-    function GetDefaultImplementorFor(ABroker:THadeBroker):THadeImplementorClass;
+    function GetByName(AImplName: string): THadeImplementorClass;
+    function GetByClassName(AClassName: string): THadeImplementorClass;
+    function GetDefaultImplementorFor(ABroker: THadeBroker): THadeImplementorClass;
 
     constructor Create;
-    destructor Destroy;override;
+    destructor Destroy; override;
   end;
 
 implementation
+
 uses
   hdsqldbimplementor;
+
 { THadeImplementorInfo }
 
 constructor THadeImplementorInfo.Create(AImplName: string;
   AObjectClass: THadeObjectClass; AImplClasses: THadeImplementorClass;
-  ABroker: THadeBroker; ADefault: Boolean);
+  ABroker: THadeBroker; ADefault: boolean);
 begin
-  Self.FImplementorName:= AImplName;
+  Self.FImplementorName := AImplName;
   if AObjectClass <> nil then
-    Self.FObjectClassName:= AObjectClass.ClassName
+    Self.FObjectClassName := AObjectClass.ClassName
   else
-    Self.FObjectClassName:= '';
-  Self.FImplementorClass:= AImplClasses;
-  Self.FImplementorBroker:= ABroker;
-  FIsDefault:= ADefault;
+    Self.FObjectClassName := '';
+  Self.FImplementorClass := AImplClasses;
+  Self.FImplementorBroker := ABroker;
+  FIsDefault := ADefault;
 end;
 
 procedure THadeImplementorManager.RegisterDefaultImplementor;
 begin
-  Self.RegisterImplementor('DefSQLDBFirebird',nil,THadeSQLDBImplementor,SQLDBFirebird,True);
-  Self.RegisterImplementor('DefSQLDBSQlite',nil,THadeSQLDBImplementor,SQLDBSQLite,True);
+  Self.RegisterImplementor('DefSQLDBFirebird', nil, THadeSQLDBImplementor,
+    SQLDBFirebird, True);
+  Self.RegisterImplementor('DefSQLDBSQlite', nil, THadeSQLDBImplementor, SQLDBSQLite, True);
 end;
 
 procedure THadeImplementorManager.RegisterImplementor(AImplName: string;
   AObjectClass: THadeObjectClass; AImplClasses: THadeImplementorClass;
-  ABroker: THadeBroker; ADefault: Boolean);
+  ABroker: THadeBroker; ADefault: boolean);
 begin
-  Flist.add(AImplName,THadeImplementorInfo.Create(AImplName,AObjectClass,AImplClasses,ABroker,ADefault));
+  Flist.add(AImplName, THadeImplementorInfo.Create(
+    AImplName, AObjectClass, AImplClasses, ABroker, ADefault));
 end;
 
 procedure THadeImplementorManager.UnRegisterImplementor(AImplName: string);
 var
-  idx: Integer;
+  idx: integer;
 begin
-  idx:= Flist.FindIndexOf(AImplName);
+  idx := Flist.FindIndexOf(AImplName);
   if idx > 0 then
   begin
     FList.Delete(idx);
@@ -106,58 +108,59 @@ end;
 
 function THadeImplementorManager.GetByName(AImplName: string): THadeImplementorClass;
 begin
-  Result:= THadeImplementorInfo(FList.Find(AImplName)).ImplementorClass;
+  Result := THadeImplementorInfo(FList.Find(AImplName)).ImplementorClass;
   if not Assigned(Result) then
-    Raise EHadeImplManagerException.Create('Connot find implementor '+AImplName);
+    raise EHadeImplManagerException.Create('Connot find implementor ' + AImplName);
 end;
 
-function THadeImplementorManager.GetByClassName(AClassName: string
-  ): THadeImplementorClass;
+function THadeImplementorManager.GetByClassName(AClassName: string):
+THadeImplementorClass;
 var
-  iloop: Integer;
+  iloop: integer;
   impl: THadeImplementorInfo;
 begin
   Result := nil;
 
-  for iloop:=0 to pred( FList.Count) do
+  for iloop := 0 to pred(FList.Count) do
   begin
-    impl:=THadeImplementorInfo(FList.Items[iloop]);
-    if sysutils.AnsiCompareText(impl.ObjectClassName, AClassName) = 0 then
+    impl := THadeImplementorInfo(FList.Items[iloop]);
+    if SysUtils.AnsiCompareText(impl.ObjectClassName, AClassName) = 0 then
     begin
-      Result:= impl.ImplementorClass;
+      Result := impl.ImplementorClass;
       Break;
     end;
   end;
 
 end;
 
-function THadeImplementorManager.GetDefaultImplementorFor(ABroker: THadeBroker
-  ): THadeImplementorClass;
+function THadeImplementorManager.GetDefaultImplementorFor(ABroker: THadeBroker):
+THadeImplementorClass;
 var
-  iloop: Integer;
+  iloop: integer;
   impl: THadeImplementorInfo;
-  Found:Boolean;
+  Found: boolean;
 begin
-  Found:= False;
+  Found := False;
 
-  for iloop:=0 to pred( FList.Count) do
+  for iloop := 0 to pred(FList.Count) do
   begin
-    impl:=THadeImplementorInfo(FList.Items[iloop]);
-    if (impl.ImplementorBroker = ABroker) AND (impl.IsDefault) then
+    impl := THadeImplementorInfo(FList.Items[iloop]);
+    if (impl.ImplementorBroker = ABroker) and (impl.IsDefault) then
     begin
-      Result:= impl.ImplementorClass;
-      Found:= True;
+      Result := impl.ImplementorClass;
+      Found := True;
       Break;
     end;
   end;
 
   if not Found then
-    Raise EHadeImplManagerException.Create('no default implemontor found for broker '+hdbroker.BrokerAsString(ABroker));
+    raise EHadeImplManagerException.Create(
+      'no default implemontor found for broker ' + hdbroker.BrokerAsString(ABroker));
 end;
 
 constructor THadeImplementorManager.Create;
 begin
-  FList:= THadeMapBase.Create();
+  FList := THadeMapBase.Create();
   Self.RegisterDefaultImplementor;
 end;
 

@@ -5,8 +5,8 @@ unit hdopfmanager;
 interface
 
 uses
-  Classes,
-  SysUtils,
+  //Classes,
+  //SysUtils,
   hdbase,
   hdmapper,
   hdimplementormanager;

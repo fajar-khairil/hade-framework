@@ -16,7 +16,7 @@
         <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
-    <Files Count="22">
+    <Files Count="23">
       <Item1>
         <Filename Value="../sources/hade-opf/connections/hdsqldbbase.pas"/>
         <UnitName Value="hdsqldbbase"/>
@@ -105,6 +105,10 @@
         <Filename Value="../sources/hade-opf/core/hdpersistentintf.pas"/>
         <UnitName Value="hdpersistentintf"/>
       </Item22>
+      <Item23>
+        <Filename Value="../sources/hade-opf/core/hdimplementormanager.pas"/>
+        <UnitName Value="hdimplementormanager"/>
+      </Item23>
     </Files>
     <Type Value="RunAndDesignTime"/>
     <RequiredPkgs Count="2">

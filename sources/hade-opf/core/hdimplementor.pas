@@ -13,9 +13,6 @@ uses
   hdobject,
   hdcriteria,
   hdquerybuilderintf;
-CONST
-  AP_SKIP_ON_ERROR = 0;
-  AP_STOP_ON_ERROR = 1;
 Type
   { THadeImplementor }
 

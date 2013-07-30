@@ -148,10 +148,10 @@ type
     function getItem(AIndex: ptrUint): THadeObject;
     procedure setItem(AIndex: ptrUint; AValue: THadeObject);
 
-    class function getChilClass: THadeObjectClass; static;
+    class function getChildClass: THadeObjectClass; static;
     function GetCriteria: THadeCriteria;
   public
-    class property ChildClass: THadeObjectClass read getChilClass write FChildClass;
+    class property ChildClass: THadeObjectClass read getChildClass write FChildClass;
 
     property Items[AIndex: ptrUint]: THadeObject read getItem write setItem; default;
     function Add(AObject: THadeObject): ptrUint;
@@ -434,7 +434,7 @@ begin
   FList := TFpObjectList.Create(False);
   fOwner := AOwner;
   if Assigned(FOwner) then
-    (FOwner as IHadeCustomObject).addChild(self);
+    FOwner.addChild(self);
 end;
 
 destructor THadeCustomObject.Destroy;
@@ -446,7 +446,7 @@ end;
 
 { THadeObjectList }
 
-class function THadeObjectList.getChilClass: THadeObjectClass; static;
+class function THadeObjectList.getChildClass: THadeObjectClass; static;
 begin
   if not Assigned(FChildClass) then
     raise EHadeObjectException.Create('you must set ChildClass property');
@@ -652,7 +652,7 @@ end;
 procedure THadeObject.FromJson(AJSonObject: TJSonObject);
 begin
   inherited FromJson(AJSonObject);
-  Self.MarkDirty;;
+  Self.MarkDirty;
 end;
 
 procedure THadeObject.LoadFromJSON(const AFileName: string);

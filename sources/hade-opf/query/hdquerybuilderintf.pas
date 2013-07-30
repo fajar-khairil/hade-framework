@@ -30,7 +30,7 @@ type
     function GetClause: string;
   end;
 
-  IHadeCriteriaAggregate = interface(IHadeQueryBuilder)
+  IHadeCriteriaAggregate = interface
   ['{FA790D9A-9191-4C56-9C65-D13E0ECBCC4C}']
     function Sum(AExpr:String):String;
     function Avg(AExpr:String):String;
@@ -129,7 +129,7 @@ type
 
   { THadeCustomQueryAggregate }
 
-  THadeCustomQueryAggregate = class(THadeCustomQueryBuilder,IHadeCriteriaAggregate)
+  THadeCustomQueryAggregate = class(THadeBaseObject,IHadeCriteriaAggregate)
   public
     function Sum(AExpr:String):String;
     function Avg(AExpr:String):String;
