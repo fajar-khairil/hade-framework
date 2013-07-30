@@ -35,10 +35,12 @@
         <Filename Value="hade_opf/testcriteria.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testcriteria"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="20" Y="37"/>
         <UsageCount Value="34"/>
+        <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="hade_opf/testcustomcriteria.pas"/>
@@ -91,7 +93,6 @@
         <Filename Value="hade_opf/testmapper.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testmapper"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
         <TopLine Value="129"/>
@@ -552,10 +553,12 @@
       <Unit68>
         <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
         <UnitName Value="hdmapper"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <CursorPos X="57" Y="18"/>
+        <TopLine Value="1"/>
+        <CursorPos X="3" Y="13"/>
         <UsageCount Value="12"/>
+        <Loaded Value="True"/>
       </Unit68>
       <Unit69>
         <Filename Value="../sources/hade-opf/core/hademapperintf.inc"/>
@@ -1190,10 +1193,13 @@
       <Unit150>
         <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
         <UnitName Value="hdcriteria"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="537"/>
-        <CursorPos X="72" Y="608"/>
+        <TopLine Value="578"/>
+        <CursorPos X="8" Y="583"/>
         <UsageCount Value="17"/>
+        <Loaded Value="True"/>
       </Unit150>
       <Unit151>
         <Filename Value="../../../repos/fpc/trunk/packages/fcl-base/src/contnrs.pp"/>
@@ -1279,7 +1285,7 @@
       <Unit161>
         <Filename Value="../sources/hade-common/hdbase.pas"/>
         <UnitName Value="hdbase"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
         <CursorPos X="44" Y="35"/>
@@ -1306,7 +1312,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="11" HistoryIndex="10">
       <Position1>
         <Filename Value="../sources/hade-opf/core/hdobject.pas"/>
         <Caret Line="8" Column="53" TopLine="1"/>
@@ -1327,6 +1333,30 @@
         <Filename Value="../sources/hade-common/hdbase.pas"/>
         <Caret Line="35" Column="3" TopLine="13"/>
       </Position5>
+      <Position6>
+        <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
+        <Caret Line="607" Column="52" TopLine="594"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
+        <Caret Line="580" Column="57" TopLine="574"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
+        <Caret Line="18" Column="57" TopLine="19"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
+        <Caret Line="13" Column="3" TopLine="1"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../sources/hade-opf/query/hdcriteria.pas"/>
+        <Caret Line="21" Column="50" TopLine="10"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../sources/hade-opf/core/hdmapper.pas"/>
+        <Caret Line="13" Column="3" TopLine="1"/>
+      </Position11>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>

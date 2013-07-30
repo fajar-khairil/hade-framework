@@ -582,12 +582,12 @@ function THadeCriteria.FieldByProp(const AProp: string): string;
     idx:integer;
   begin
     Result:= '';
-    idx:= 0;
-    if system.Pos('.',AProp) = 0 then
+    idx:= system.Pos('.',AProp);
+    if idx = 0 then
       Exit
     else begin
       ATableName := copy(AProp,0,idx-1);
-      Result := copy(AProp,idx + 1,length(AProp));
+      Result := copy(AProp,idx + 1,length(AProp) - idx);
     end;
   end;
 
@@ -603,6 +603,7 @@ begin
   Found:= False;
 
   FTmp := SplitClassName(ATable);
+
   if FTmp <> EmptyStr then
   begin
     ClassMap := GHadeOPFManager.PersistenceMapper.FindClassMap(ATable);

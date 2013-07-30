@@ -34,7 +34,7 @@ procedure TTestCriteria.TestSimple;
 var
   expect: String;
 begin
-  criteria.Equal('FirstName',person.FirstName);
+  criteria.Equal('TPerson.FirstName',person.FirstName);
   criteria.Equal('Age',person.Age);
   criteria.Equal('Birthday',person.Birthday);
 
