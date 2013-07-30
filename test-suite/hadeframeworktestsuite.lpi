@@ -103,7 +103,7 @@
         <PackageName Value="FCL"/>
       </Item4>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="12">
       <Unit0>
         <Filename Value="hadeframeworktestsuite.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -149,6 +149,21 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="testhadeobject"/>
       </Unit8>
+      <Unit9>
+        <Filename Value="hade_opf/testmapper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testmapper"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="hade_opf/testcustominsert.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testcustominsert"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="hade_opf/testcustomupdate.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testcustomupdate"/>
+      </Unit11>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

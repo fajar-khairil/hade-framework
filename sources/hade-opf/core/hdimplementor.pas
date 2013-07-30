@@ -23,7 +23,6 @@ Type
   protected
     FConnection:THadeConnection;
 
-    function GetImplementor(AObject:THadeObjectClass):THadeCustomImplementor;
     function GetImplementor(AClassName:string):THadeCustomImplementor;
 
     procedure InternalRead(AImplementor:IHadeImplementor;
@@ -35,10 +34,6 @@ Type
     procedure Read(AObject:THadeObjectList;ACriteria:THadeCriteria;AFetchMode: TFetchMode);
     procedure ApplyUpdate(AObject:THadeObjectList);
 
-    //procedure InsertRow(const AClassName:string;ACriteria:THadeCriteria);
-    //procedure UpdateRow(const AClassName:string;ACriteria:THadeCriteria);
-    //procedure DeleteRow(const AClassName:string;ACriteria:THadeCriteria);
-
     constructor Create(AConnection:THadeConnection);
     destructor Destroy;override;
   end;
@@ -48,12 +43,6 @@ uses
   hdopfmanager;
   //hdquerybuilder;
 { THadeImplementor }
-
-function THadeImplementor.GetImplementor(AObject: THadeObjectClass
-  ): THadeCustomImplementor;
-begin
-  Result := Self.GetImplementor(AObject.ClassName);
-end;
 
 function THadeImplementor.GetImplementor(AClassName: string
   ): THadeCustomImplementor;
@@ -86,14 +75,18 @@ var
   criteria: THadeCustomCriteria;
   pk: THadePropertiesMapper;
 begin
-  Implementor := Self.GetImplementor( THadeObjectClass(AObject.ClassType) );
+  Implementor := Self.GetImplementor( AObject.ClassName );
   IHadeObject(AObject).MarkDirty;
 
   case AObject.ObjectState of
     posCreate: Implementor.Insert(AObject);
-    posUpdate:
+    posUpdate,posDelete:
     begin
-      Implementor.Update(AObject);
+      if AObject.ObjectState = posUpdate then
+        Implementor.Update(AObject)
+      else if AObject.ObjectState = posDelete then
+        Implementor.Delete(AObject);
+
       criteria:= THadeCustomCriteria.create;
       pk := GHadeOPFManager.PersistenceMapper.FindClassMap(AObject.ClassName).getPK;
       try
@@ -102,19 +95,6 @@ begin
         Implementor.Query.ExecSQL;
       finally
         Criteria.Free;
-      end;
-    end;
-    posDelete:
-    begin
-      Implementor.Delete(AObject);
-      criteria:= THadeCustomCriteria.create;
-      pk := GHadeOPFManager.PersistenceMapper.FindClassMap(AObject.ClassName).getPK;
-      try
-        criteria.Equal(pk.ColumnName,Implementor.ObjectFactory.ObjectToRowString(AObject,pk.PropertyName));
-        Implementor.Query.SQL.Add(criteria.GetClause);
-        Implementor.Query.ExecSQL;
-      finally
-        criteria.Free;
       end;
     end;
   end;
@@ -131,7 +111,7 @@ var
 begin
   (AObject as IHadeObject).MarkDirty;
 
-  Implementor := Self.GetImplementor( THadeObjectClass(AObject.ClassType) );
+  Implementor := Self.GetImplementor( AObject.ClassName );
   Implementor.Select(AObject.ClassType,AFetchMode);
 
   tmpCriteria := THadeCustomCriteria.Create;
@@ -153,7 +133,7 @@ procedure THadeImplementor.Read(AObject: THadeObjectList;
 var
   Implementor: IHadeImplementor;
 begin
-  Implementor := Self.GetImplementor(AObject.ChildClass);
+  Implementor := Self.GetImplementor(AObject.ChildClass.ClassName);
   Implementor.Select(AObject.ChildClass,AFetchMode);
 
   Self.InternalRead(Implementor,ACriteria);
@@ -168,28 +148,6 @@ begin
   for iloop:= 0 to pred(AObject.Count)do
     Self.Save(AObject.Items[iloop]);
 end;
-
-{procedure THadeImplementor.InsertRow(const AClassName: string;
-  ACriteria: THadeCriteria);
-var
-  Implementor: IHadeImplementor;
-  InsertBuilder: THadeQueryBuilderInsert;
-  ATable: String;
-  AClassMap: THadeClassMapper;
-  cols: TStringList;
-begin
-  Implementor := Self.GetImplementor( AClassName );
-  InsertBuilder:= THadeQueryBuilderInsert.Create;
-  AClassMap := GHadeOPFManager.PersistenceMapper.FindClassMap(AClassName);
-  ATable := AClassMap.Table;
-  cols := AClassMap.getWriteableProperties.getColumnLists;
-
-  try
-    InsertBuilder.Insert(ATable,cols.CommaText);
-  finally
-    InsertBuilder.Free;
-  end;
-end;}
 
 constructor THadeImplementor.Create(AConnection: THadeConnection);
 begin

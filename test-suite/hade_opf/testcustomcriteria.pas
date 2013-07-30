@@ -136,7 +136,6 @@ begin
   Aexpect:='WHERE BIRTH = '+FCriteria.Now;
   FCriteria.Equal('BIRTH',FCriteria.Now);
   Self.AssertEquals(AExpect,UpperCase(FCriteria.GetClause));
-  WriteLn('FCriteria.Now = '+FCriteria.Now);
 end;
 
 procedure TTestCustomCriteria.TestCurrentDate;
@@ -146,7 +145,6 @@ begin
   Aexpect:='WHERE BIRTH = '+FCriteria.CurrentDate;
   FCriteria.Equal('BIRTH',FCriteria.CurrentDate);
   Self.AssertEquals(AExpect,UpperCase(FCriteria.GetClause));
-  WriteLn('FCriteria.CurrentDate = '+FCriteria.CurrentDate);
 end;
 
 procedure TTestCustomCriteria.TestCurrentTime;
@@ -156,7 +154,6 @@ begin
   Aexpect:='WHERE BIRTH = '+FCriteria.CurrentTime;
   FCriteria.Equal('BIRTH',FCriteria.CurrentTime);
   Self.AssertEquals(AExpect,UpperCase(FCriteria.GetClause));
-  WriteLn('FCriteria.CurrentTime = '+FCriteria.CurrentTime);
 end;
 
 procedure TTestCustomCriteria.TestCurrentUnixTimestamp;
@@ -166,7 +163,6 @@ begin
   Aexpect:='WHERE BIRTH = '+FCriteria.CurrentUnixTimestamp;
   FCriteria.Equal('BIRTH',FCriteria.CurrentUnixTimestamp);
   Self.AssertEquals(AExpect,UpperCase(FCriteria.GetClause));
-  WriteLn('FCriteria.CurrentUnixTimestamp = '+FCriteria.CurrentUnixTimestamp);
 end;
 
 procedure TTestCustomCriteria.SetUp;

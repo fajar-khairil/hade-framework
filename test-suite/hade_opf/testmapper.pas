@@ -141,7 +141,7 @@ begin
   GHadeOPFManager.PersistenceMapper.MapProperties(TSuperPerson,
     'Job', 'job', [], ftString);
 
-  self.AssertEquals(SQLITE_DATABASE_NAME, GHadeOPFManager.PersistenceMapper.Connections.Find().Database);
+  self.AssertEquals(ExtractFilePath(ParamStr(0))+SQLITE_DATABASE_NAME, GHadeOPFManager.PersistenceMapper.Connections.Find().Database);
   self.AssertEquals('person', GHadeOPFManager.PersistenceMapper.FindClassMap(
     'TSuperPerson').Table);
 

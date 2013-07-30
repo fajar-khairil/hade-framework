@@ -10,8 +10,8 @@ uses
   hdobject,
   hdimplementorintf;
 Const
-  FB_DATABASE_NAME = '/home/fajar/bin/test.fdb';
-  SQLITE_DATABASE_NAME = '/home/fajar/bin/person.db';
+  //FB_DATABASE_NAME = 'test.fdb';
+  SQLITE_DATABASE_NAME = 'person.db';
 Type
 
   TPersonList = class;
@@ -108,18 +108,21 @@ uses
 
 procedure initMapper;
 var
+  CURR_DIR :string;
   sqClassMapper: THadeClassMapper;
   sqCompanyMapper: THadeClassMapper;
   sqSuperPersonMapper: THadeClassMapper;
 begin
+  CURR_DIR := ExtractFilePath(ParamStr(0));
+
   GHadeOPFManager.PersistenceMapper.MapConnection('sqlite',
-    SQLITE_DATABASE_NAME,
+    CURR_DIR+SQLITE_DATABASE_NAME,
     '127.0.0.1','','','SQLDBSqlite',TRUE);
 
   //firebird connection
-  GHadeOPFManager.PersistenceMapper.MapConnection('firebird',
-    FB_DATABASE_NAME,
-    '127.0.0.1','SYSDBA','masterkey','SQLDBFirebird');
+  {GHadeOPFManager.PersistenceMapper.MapConnection('firebird',
+    CURR_DIR+FB_DATABASE_NAME,
+    '127.0.0.1','SYSDBA','masterkey','SQLDBFirebird');}
 
   sqClassMapper := GHadeOPFManager.PersistenceMapper.MapClass(TPerson, 'person');
   sqCompanyMapper := GHadeOPFManager.PersistenceMapper.MapClass(TCompany, 'company');

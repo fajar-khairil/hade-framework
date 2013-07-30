@@ -72,10 +72,6 @@ type
     procedure ApplyUpdate(const AObjectList:THadeObjectList;
       AUpdateMode:TUpdateMode = upStopError);
 
-    {procedure InsertRow(const AClassName:string;ACriteria:THadeCriteria);
-    procedure UpdateRow(const AClassName:string;ACriteria:THadeCriteria);
-    procedure DeleteRow(const AClassName:string;ACriteria:THadeCriteria);}
-
     function RecordsCount(ATableName:string):ptrUint;
     procedure ExecuteScripts(const AFileName:string);
 

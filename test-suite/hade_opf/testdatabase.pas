@@ -210,7 +210,7 @@ begin
   database := THadeDatabase.Create();
   database.StartTransaction();
   try
-    database.ExecuteScripts('/home/fajar/bin/person.sql');
+    database.ExecuteScripts( ExtractFilePath(ParamStr(0)) + 'person.sql' );
     self.AssertEquals(10, database.RecordsCount('person'));
   except
     on E:Exception do

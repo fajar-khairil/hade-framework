@@ -125,7 +125,7 @@ begin
     person.Age:= 23;
     person.Birthday:= sysutils.StrToDate('02-03-1990');
 
-    person.SaveAsJSON('/home/fajar/bin/person.json');
+    person.SaveAsJSON(ExtractFilePath(ParamStr(0))+'person.json');
   finally
     FreeAndNil(person);
   end;
@@ -137,7 +137,7 @@ var
 begin
   person := TPerson.Create(nil);
   try
-    person.LoadFromJSON('/home/fajar/bin/person.json');
+    person.LoadFromJSON(ExtractFilePath(ParamStr(0))+'person.json');
     self.AssertEquals('Fajar',person.FirstName);
     self.AssertEquals('Khairil',person.LastName);
     self.AssertEquals(23,person.Age);
@@ -171,7 +171,7 @@ begin
      personlist[iloop].Birthday:= StrToDate('02-03-1990');
      persons.add(personlist[iloop]);
    end;
-   persons.SaveAsJSON('/home/fajar/bin/person-list.json');
+   persons.SaveAsJSON(ExtractFilePath(ParamStr(0))+'person-list.json');
  finally
    FreeAndNil(persons);
  end;
@@ -183,7 +183,7 @@ var
 begin
   personList := TPersonList.Create(nil);
   try
-    personList.LoadFromJSON('/home/fajar/bin/person-list.json');
+    personList.LoadFromJSON(ExtractFilePath(ParamStr(0))+'person-list.json');
     self.AssertEquals('Test1',personList[1].FirstName);
     self.AssertEquals('Silobahutang1',personList[1].LastName);
     self.AssertEquals(24,personList[1].Age);
