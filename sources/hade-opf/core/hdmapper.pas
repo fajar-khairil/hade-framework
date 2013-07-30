@@ -15,7 +15,7 @@ uses
 
 type
   EHadeMapperException = class(EHadeException);
-  ptkInfo = (ptkPK, ptkFK, ptkReadOnly,ptkAutoInc);
+  ptkInfo = (ptkPK, ptkFK, ptkReadOnly,ptkAutoInc,ptkOID);
   TSetPtkInfo = set of ptkInfo;
   ftType = (ftInteger, ftString, ftBlob, ftReference, ftDateTime, ftSmallInt, ftDouble);
   TRelationType = (rtOneToOne,rtOneToMany,rtManyToMany);

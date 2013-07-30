@@ -5,7 +5,6 @@ unit hdimplementor;
 interface
 
 uses
-  SysUtils, Classes,
   hdbase,
   hdimplementorintf,
   hdmapper,
