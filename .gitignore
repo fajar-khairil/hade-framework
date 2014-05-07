@@ -1,0 +1,4 @@
+*.bak
+tests/backup
+testsuite
+tests/lib
