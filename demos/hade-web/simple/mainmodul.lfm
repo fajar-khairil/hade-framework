@@ -1,0 +1,24 @@
+object MainModule: TMainModule
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Actions = <  
+    item
+      Name = 'index'
+      Default = True
+      OnRequest = indexRequest
+      Template.AllowTagParams = False
+    end  
+    item
+      Name = 'long'
+      Default = False
+      OnRequest = longRequest
+      Template.AllowTagParams = False
+    end>
+  ActionVar = 'action'
+  CreateSession = False
+  Height = 150
+  HorizontalOffset = 520
+  VerticalOffset = 137
+  Width = 150
+end
