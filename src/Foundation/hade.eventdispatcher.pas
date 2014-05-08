@@ -97,16 +97,14 @@ begin
   if not Assigned(lEventList) then
   begin
     lEventList := TFPList.Create();
-    if FMap.Add(AEventName,lEventList) < 0 then
-      raise EEventDispatcher.create('125');
+    FMap.Add(AEventName,lEventList);
   end;
 
   h := new(PMethod);
   h^.Code:= TMethod(AEvent).Code;
   h^.Data:= TMethod(AEvent).Data;
 
-  if lEventList.Add(h) < 0 then
-    raise EEventDispatcher.create('129');
+  lEventList.Add(h);
 end;
 
 procedure TEventDispatcher.removeEvent(const AEventName: string);
