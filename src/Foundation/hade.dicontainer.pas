@@ -19,19 +19,13 @@ uses
 Type
     TProcedurePointer = Procedure(out APointer:Pointer);
     TContentType = (ctSingleton,ctFactory);
+
     { TContentContainer }
-
-    TContentContainer = class
-    private
-      FBuilder: TProcedurePointer;
-      FName: string;
-      FContentType : TContentType;
-    public
-      property IdentfierName : string read FName write FName;
-      property Builder : TProcedurePointer read FBuilder write FBuilder;
-      property ContentType : TContentType read FContentType write FContentType;
-
-      Constructor Create(const AIdentifierName :string;ABuilder : TProcedurePointer;AContentType:TContentType);
+    PContentContainer = ^TContentContainer;
+    TContentContainer = Record
+      Builder: TProcedurePointer;
+      Name: string;
+      ContentType : TContentType;
     end;
 
     { EDIContainer }
@@ -67,23 +61,20 @@ Type
     end;
 
 implementation
-
+uses
+  strutils;
 { TContentContainer }
-
-constructor TContentContainer.Create(const AIdentifierName: string;
-  ABuilder: TProcedurePointer; AContentType: TContentType);
-begin
-  FBuilder := ABuilder;
-  FName := AIdentifierName;
-  FContentType := AContentType;
-end;
-
-{ TDIContainer }
 
 procedure TDIContainer.internalBind(const AIdentifierName: string;
   AImplementation: TProcedurePointer;AContentType:TContentType);
+var
+  lContent : PContentContainer;
 begin
-    FMap.Add(AIdentifierName,TContentContainer.Create(AIdentifierName,AImplementation,AContentType));
+  lContent := new(PContentContainer);
+  lContent^.Name:= AIdentifierName;
+  lContent^.Builder:= AImplementation;
+  lContent^.ContentType:= AContentType;
+  FMap.Add(AIdentifierName,lContent);
 end;
 
 procedure TDIContainer.Singleton(const AIdentifierName: string;
@@ -100,35 +91,38 @@ end;
 
 function TDIContainer.make(const AIdentifierName: String): pointer;
 var
-  lfunc: TContentContainer;
+  lfunc: PContentContainer;
 begin
-  lfunc := TContentContainer(FMap.Find(AIdentifierName));
+  lfunc := PContentContainer(FMap.Find(AIdentifierName));
   if not Assigned(lFunc)  then
     Raise EDIContainer.Create(AIdentifierName+' doesnt exists.');
 
-  if lFunc.ContentType = ctSingleton then
+  if lFunc^.ContentType = ctSingleton then
   begin
     Result := FMap.Find('instance_'+AIdentifierName);
     if not Assigned(Result) then
     begin
-      lfunc.Builder(Result);
+      lfunc^.Builder(Result);
       FMap.Add('instance_'+AIdentifierName,Result);
     end;
   end else
   begin
-    lfunc.Builder(Result);
+    lfunc^.Builder(Result);
   end;
 end;
 
 procedure TDIContainer.Clear;
 var
   iloop: Integer;
-  obj: TObject;
+  obj: Pointer;
 begin
   for iloop := 0 to pred(FMap.Count) do
   begin
-    obj := TObject(FMap.Items[iloop]);
-    obj.Free;
+    obj := FMap.Items[iloop];
+    if StrUtils.AnsiStartsStr('instance_' , trimLeft(FMap.NameOfIndex(iloop)) ) then
+      TObject(obj).Free
+    else
+      Dispose(PContentContainer(obj));
   end;
   FKeys.Clear;
 end;
