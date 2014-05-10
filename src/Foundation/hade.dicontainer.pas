@@ -43,8 +43,9 @@ Type
 
     TDIContainer = class
     protected
-      FMap : TStringHashMap;
+      FMap : TFPHashList;
       FKeys : TStringList;
+
       procedure internalBind(
         const AIdentifierName : string;
         AImplementation : TProcedurePointer;
@@ -62,7 +63,7 @@ Type
       procedure Clear;
       function all : TStringList;
 
-      Constructor Create(const ACaseSensitive:boolean = True);
+      Constructor Create;
       Destructor Destroy;override;
     end;
 
@@ -83,15 +84,7 @@ end;
 procedure TDIContainer.internalBind(const AIdentifierName: string;
   AImplementation: TProcedurePointer;AContentType:TContentType);
 begin
-  try
     FMap.Add(AIdentifierName,TContentContainer.Create(AIdentifierName,AImplementation,AContentType));
-    FKeys.Add(AIdentifierName);
-  except
-    on E:Exception do
-    begin
-      raise EDIContainer.Create(E.Message);
-    end;
-  end;
 end;
 
 procedure TDIContainer.Singleton(const AIdentifierName: string;
@@ -110,13 +103,14 @@ function TDIContainer.make(const AIdentifierName: String): pointer;
 var
   lfunc: TContentContainer;
 begin
-  lfunc := nil;
-  if not FMap.Find(AIdentifierName,lfunc) then
-    Result := lFunc;
+  lfunc := TContentContainer(FMap.Find(AIdentifierName));
+  if not Assigned(lFunc)  then
+    Raise EDIContainer.Create(AIdentifierName+' doesnt exists.');
 
   if lFunc.ContentType = ctSingleton then
   begin
-    if not FMap.Find('instance_'+AIdentifierName,Result) then
+    Result := FMap.Find('instance_'+AIdentifierName);
+    if not Assigned(Result) then
     begin
       lfunc.Builder(Result);
       FMap.Add('instance_'+AIdentifierName,Result);
@@ -128,8 +122,15 @@ begin
 end;
 
 procedure TDIContainer.Clear;
+var
+  iloop: Integer;
+  obj: TObject;
 begin
-  FMap.Iterate(TObject.Create,@Iterate_FreeObjects);
+  for iloop := 0 to pred(FMap.Count) do
+  begin
+    obj := TObject(FMap.Items[iloop]);
+    obj.Free;
+  end;
   FKeys.Clear;
 end;
 
@@ -138,9 +139,9 @@ begin
   Result := FKeys;
 end;
 
-constructor TDIContainer.Create(const ACaseSensitive:boolean);
+constructor TDIContainer.Create;
 begin
-  FMap := TStringHashMap.Create(2047,ACaseSensitive);
+  FMap := TFPHashList.Create;
   FKeys := TStringList.Create;
 end;
 
