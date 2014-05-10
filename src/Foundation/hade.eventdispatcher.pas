@@ -17,9 +17,10 @@ uses
   Classes,
   SysUtils,
   hade.eventdispatcherintf,
+  StrHashMap,
   contnrs;
 Type
-  PMethod = ^TMethod;
+  {$i type.inc}
   { EEventDispatcher }
 
   EEventDispatcher = class(Exception)end;
@@ -28,7 +29,9 @@ Type
 
   TEventDispatcher = class(IEventDispatcher)
   protected
-    FMap: TFPHashList;
+    FMap: TStringHashMap;
+    FMapIndex : TFPObjectList;
+    FKeys : TStringList;
   public
     //Dispatch specific event
     procedure dispatch(const AEventName : string;AEvent:Pointer);
@@ -50,9 +53,9 @@ Type
     function all:TStringList;
 
     //clear all events
-    procedure clear;
+    procedure Clear;
 
-    constructor Create;
+    constructor Create(const ACaseSensitive:boolean = True);
     destructor Destroy;override;
   end;
 
@@ -66,8 +69,7 @@ var
   iloop: Integer;
   lEvent: PNotifyEventDispatcher;
 begin
-  lEventList := TFPList(FMap.Find(AEventName));
-  if not Assigned(lEventList) then
+  if not FMap.Find(AEventName,lEventList) then
     raise EEventDispatcher.Create(format('%s not registered on Dispatcher.',[AEventName]));
 
   for iloop:= 0 to pred(lEventList.Count) do
@@ -84,71 +86,62 @@ var
   lEventList: TFPList;
   h : PMethod;
 begin
-  lEventList := TFPList(FMap.Find(AEventName));
-  if not Assigned(lEventList) then
+  if not FMap.Find(AEventName,lEventList) then
   begin
     lEventList := TFPList.Create();
     FMap.Add(AEventName,lEventList);
+    FMapIndex.Add(lEventList);
+    FKeys.Add(AEventName);
   end;
 
   h := new(PMethod);
   h^.Code:= TMethod(AEvent).Code;
   h^.Data:= TMethod(AEvent).Data;
 
-  lEventList.Add(h);
+  lEventList.Add( h );
 end;
 
 procedure TEventDispatcher.removeEvent(const AEventName: string);
 begin
-  FMap.Delete( FMap.FindIndexOf(AEventName) );
+  Fmap.Remove(AEventName);
 end;
 
 function TEventDispatcher.all: TStringList;
-var
-  iloop: Integer;
 begin
-  Result :=TStringList.Create;
-  try
-    for iloop:=0 to pred(FMap.Count) do
-    begin
-      Result.Add( FMap.NameOfIndex(iloop) );
-    end;
-  except
-    Result.Free;
-    Result := nil;
-  end;
+  Result := FKeys;
 end;
 
-procedure TEventDispatcher.clear;
+procedure TEventDispatcher.Clear;
 var
   iloop: Integer;
-  lCount: Integer;
+  lMap: TFPList;
   jloop: Integer;
-  mapCount: Integer;
-  local: TFPList;
 begin
-  mapCount := FMap.Count;
-  for iloop:=0 to pred(mapCount) do
+  for iloop := 0 to pred( FMapIndex.Count ) do
   begin
-    local := TFPList(FMap.Items[iloop]);
-    lCount := local.Count;
-    for jloop := 0 to pred( lCount ) do
+    lMap := TFPList(FMapIndex.Items[iloop]);
+    for jloop:=0 to pred( lMap.count ) do
     begin
-      dispose(PMethod(local.Items[jloop]));
+      Dispose(PMethod(lMap.Items[jloop]));
     end;
-    local.Free;
+    lMap.Free;
   end;
-  FMap.Pack;
+
+  FKeys.Clear;
 end;
 
-constructor TEventDispatcher.Create;
+constructor TEventDispatcher.Create(const ACaseSensitive:boolean);
 begin
-  FMap := TFPHashList.Create();
+  FMap := TStringHashMap.Create(2047,ACaseSensitive);
+  FMapIndex := TFPObjectList.Create(False);
+  FKeys := TStringList.Create;
 end;
 
 destructor TEventDispatcher.Destroy;
 begin
   self.Clear;
+  FMapIndex.Free;
+  FKeys.Free;
   FMap.Free;
   inherited Destroy;
 end;

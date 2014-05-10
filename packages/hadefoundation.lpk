@@ -5,7 +5,8 @@
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
-        <OtherUnitFiles Value="../src/Foundation"/>
+        <IncludeFiles Value="../src/inc"/>
+        <OtherUnitFiles Value="../src/Foundation;../src/Vendor"/>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Other>
@@ -15,7 +16,7 @@
         <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
-    <Files Count="2">
+    <Files Count="3">
       <Item1>
         <Filename Value="../src/Foundation/hade.eventdispatcher.pas"/>
         <UnitName Value="hade.EventDispatcher"/>
@@ -24,6 +25,10 @@
         <Filename Value="../src/Foundation/hade.eventdispatcherintf.pas"/>
         <UnitName Value="hade.EventDispatcherIntf"/>
       </Item2>
+      <Item3>
+        <Filename Value="../src/Foundation/hade.dicontainer.pas"/>
+        <UnitName Value="hade.DiContainer"/>
+      </Item3>
     </Files>
     <Type Value="RunAndDesignTime"/>
     <RequiredPkgs Count="1">
