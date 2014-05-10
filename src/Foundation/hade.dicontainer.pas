@@ -15,7 +15,6 @@ interface
 uses
   Classes,
   SysUtils,
-  StrHashMap,
   contnrs;
 Type
     TProcedurePointer = Procedure(out APointer:Pointer);
