@@ -44,6 +44,11 @@ Type
     TDIContainer = class
     protected
       FMap : TStringHashMap;
+      FKeys : TStringList;
+      procedure internalBind(
+        const AIdentifierName : string;
+        AImplementation : TProcedurePointer;
+        AContentType:TContentType);
     public
       procedure Singleton(
         const AIdentifierName : string;
@@ -54,7 +59,8 @@ Type
 
       function make(const AIdentifierName:String):pointer;
 
-      //procedure Clear;
+      procedure Clear;
+      function all : TStringList;
 
       Constructor Create(const ACaseSensitive:boolean = True);
       Destructor Destroy;override;
@@ -74,16 +80,30 @@ end;
 
 { TDIContainer }
 
+procedure TDIContainer.internalBind(const AIdentifierName: string;
+  AImplementation: TProcedurePointer;AContentType:TContentType);
+begin
+  try
+    FMap.Add(AIdentifierName,TContentContainer.Create(AIdentifierName,AImplementation,AContentType));
+    FKeys.Add(AIdentifierName);
+  except
+    on E:Exception do
+    begin
+      raise EDIContainer.Create(E.Message);
+    end;
+  end;
+end;
+
 procedure TDIContainer.Singleton(const AIdentifierName: string;
   AImplementation: TProcedurePointer);
 begin
-  FMap.Add(AIdentifierName,TContentContainer.Create(AIdentifierName,AImplementation,ctSingleton));
+  Self.internalBind(AIdentifierName,AImplementation,ctSingleton);
 end;
 
 procedure TDIContainer.Bind(const AIdentifierName: string;
   AImplementation: TProcedurePointer);
 begin
-  FMap.Add(AIdentifierName,TContentContainer.Create(AIdentifierName,AImplementation,ctFactory));
+  Self.internalBind(AIdentifierName,AImplementation,ctFactory);
 end;
 
 function TDIContainer.make(const AIdentifierName: String): pointer;
@@ -107,15 +127,28 @@ begin
   end;
 end;
 
+procedure TDIContainer.Clear;
+begin
+  FMap.Iterate(TObject.Create,@Iterate_FreeObjects);
+  FKeys.Clear;
+end;
+
+function TDIContainer.all: TStringList;
+begin
+  Result := FKeys;
+end;
+
 constructor TDIContainer.Create(const ACaseSensitive:boolean);
 begin
   FMap := TStringHashMap.Create(2047,ACaseSensitive);
+  FKeys := TStringList.Create;
 end;
 
 destructor TDIContainer.Destroy;
 begin
-  FMap.Iterate(TObject.Create,@Iterate_FreeObjects);
+  self.Clear;
   FMap.Free;
+  FKeys.Free;
   inherited Destroy;
 end;
 
