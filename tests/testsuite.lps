@@ -3,22 +3,23 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="4">
+    <Units Count="13">
       <Unit0>
         <Filename Value="testsuite.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="testsuite"/>
-        <UsageCount Value="20"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="5"/>
+        <CursorPos X="5" Y="25"/>
+        <UsageCount Value="23"/>
       </Unit0>
       <Unit1>
         <Filename Value="opf/querybuilder.pas"/>
-        <IsPartOfProject Value="True"/>
         <UnitName Value="querybuilder"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="30" Y="9"/>
+        <UsageCount Value="23"/>
       </Unit1>
       <Unit2>
         <Filename Value="../../../fpc/rtl/unix/sysutils.pp"/>
@@ -36,6 +37,78 @@
         <CursorPos X="1" Y="1"/>
         <UsageCount Value="10"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="../../../lazarus/components/fpcunit/console/consoletestrunner.pas"/>
+        <UnitName Value="consoletestrunner"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="37"/>
+        <CursorPos X="20" Y="114"/>
+        <UsageCount Value="11"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../fpc/packages/fcl-fpcunit/src/testregistry.pp"/>
+        <UnitName Value="testregistry"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="26" Y="24"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../fpc/packages/fcl-base/src/custapp.pp"/>
+        <UnitName Value="CustApp"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="23"/>
+        <CursorPos X="3" Y="29"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../fpc/rtl/objpas/classes/classesh.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="40"/>
+        <CursorPos X="45" Y="16"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="../../../fpc/packages/fcl-fpcunit/src/testutils.pp"/>
+        <UnitName Value="testutils"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="11" Y="109"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="../../../fpc/packages/fcl-fpcunit/src/fpcunit.pp"/>
+        <UnitName Value="fpcunit"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../../../fpc/packages/fcl-fpcunit/src/testdecorator.pp"/>
+        <UnitName Value="testdecorator"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../src/Foundation/hade.eventdispatcher.pas"/>
+        <UnitName Value="hade.EventDispatcher"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="110"/>
+        <CursorPos X="35" Y="123"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../src/Foundation/hade.eventdispatcherintf.pas"/>
+        <UnitName Value="hade.EventDispatcherIntf"/>
+        <IsVisibleTab Value="True"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="9"/>
+        <CursorPos X="43" Y="9"/>
+        <UsageCount Value="10"/>
+      </Unit12>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
