@@ -16,7 +16,7 @@ interface
 uses
   Classes,
   SysUtils,
-  eventdispatcherintf,
+  hade.eventdispatcherintf,
   contnrs;
 Type
   PMethod = ^TMethod;
