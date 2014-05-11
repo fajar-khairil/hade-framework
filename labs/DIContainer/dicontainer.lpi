@@ -35,17 +35,12 @@
         <PackageName Value="hadefoundation"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="1">
       <Unit0>
         <Filename Value="dicontainer.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="dicontainer"/>
       </Unit0>
-      <Unit1>
-        <Filename Value="initapp.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="initapp"/>
-      </Unit1>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

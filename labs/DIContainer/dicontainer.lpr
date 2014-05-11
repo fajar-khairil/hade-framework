@@ -20,13 +20,17 @@ private
 public
   property Name : string read FName write FName;
   procedure sayHello();
+end;
+
+TObjectFactory = class
+public
   procedure testMake(out APerson: Pointer);
   procedure testMakeSingleton(out APerson: Pointer);
 end;
 
 { TTest }
 
-procedure TPerson.testMake(out APerson: Pointer);
+procedure TObjectFactory.testMake(out APerson: Pointer);
 begin
   WriteLn('-------------------------------');
   WriteLn('Debug : Creating Person Object');
@@ -35,7 +39,7 @@ begin
   TPerson(APerson).Name := 'Fajar';
 end;
 
-procedure TPerson.testMakeSingleton(out APerson: Pointer);
+procedure TObjectFactory.testMakeSingleton(out APerson: Pointer);
 begin
   WriteLn('-------------------------------');
   WriteLn('Debug : Creating Singleton Object');
@@ -55,14 +59,14 @@ var
   GContainer :TDIContainer;
   Obj: TPerson;
   obj2: TPerson;
-  test: TPerson;
+  factory: TObjectFactory;
 
 begin
-  test := TPerson.Create;
+  factory := TObjectFactory.Create;
   GContainer := TDIContainer.Create();
   try
-    GContainer.Bind('test',@test.testMake);
-    GContainer.Singleton('singleton',@test.testMakeSingleton);
+    GContainer.Bind('test',@factory.testMake);
+    GContainer.Singleton('singleton',@factory.testMakeSingleton);
 
     TPerson(GContainer.make('singleton')).sayHello();
     TPerson(GContainer.make('singleton')).sayHello();
@@ -77,7 +81,7 @@ begin
   finally
     Obj.Free;
     Obj2.Free;
-    test.Free;
+    factory.Free;
     GContainer.Free;
   end;
 end.

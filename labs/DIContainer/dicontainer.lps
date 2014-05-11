@@ -8,23 +8,21 @@
         <Filename Value="dicontainer.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="dicontainer"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="19" Y="11"/>
+        <TopLine Value="65"/>
+        <CursorPos X="36" Y="68"/>
         <UsageCount Value="30"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="initapp.pas"/>
-        <IsPartOfProject Value="True"/>
         <UnitName Value="initapp"/>
-        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="66" Y="8"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="../../src/Vendor/StrHashMap.pas"/>
@@ -226,7 +224,6 @@
       </Unit28>
       <Unit29>
         <Filename Value="../../src/Foundation/hade.customapp.pas"/>
-        <UnitName Value="hade.CustomApp"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="10" Y="10"/>
@@ -243,10 +240,9 @@
       <Unit31>
         <Filename Value="../../src/Foundation/hade.fluent.pas"/>
         <UnitName Value="hade.Fluent"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
+        <TopLine Value="19"/>
         <CursorPos X="22" Y="15"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
