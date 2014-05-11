@@ -6,6 +6,8 @@ unit hade.Fluent;
  * License MPL 1.1
  *
  * Description : Fluent Object Interface
+ * trying to mimic the ideas of Laravel(php framework) Fluent interface
+ * to pascal world.
  ******************************************************************************}
 {$mode objfpc}{$H+}
 
@@ -15,56 +17,12 @@ uses
   Classes,
   SysUtils,
   variants,
-  contnrs,
   StrHashMap;
 Type
+  {$i fluentintf.inc}
 
-  { EFluent }
-
-  EFluent = class(Exception)End;
   TFluentItem = class;
-
-  //fpc generic interface is still buggy, take clasic approach
-  {$INTERFACES CORBA}
-  IFluentEnumerator = interface
-  ['{3133BED5-AC73-4419-94C3-4691F4528DDC}']
-    function GetCurrent: TFluentItem;
-    function MoveNext: Boolean;
-    procedure Reset;
-    property Current: TFluentItem read GetCurrent;
-  end;
-
-
-  { TFluent }
-
-  TFluent = class(IFluentEnumerator)
-  private
-    function getCount: ptrUint;
-  protected
-    FCursor : ptrUint;
-    FKeyList : TStringList;
-    FList : TStringHashMap;
-
-    function GetCurrent: TFluentItem;
-  public
-    procedure clear;
-    function First: TFluentItem;
-    function Last: TFluentItem;
-    function Extract(const ItemKey:shortstring): TFluentItem;
-    procedure Remove(const ItemKey:shortstring);
-
-    property List : TStringHashMap read FList;
-    property Count : ptrUint read getCount;
-    //IEnumerator
-    function MoveNext: Boolean;
-    procedure Reset;
-    property Current: TFluentItem read GetCurrent;
-
-    function Items(const AKeyName:shortstring) : TFluentItem;
-
-    constructor Create;
-    Destructor Destroy;override;
-  end;
+  TFluent = specialize TCustomFluent<TFluentItem>;
 
   { TFluentItem }
 
@@ -100,143 +58,20 @@ Type
     Constructor Create(const AValue : Variant);
   end;
 
-var
-  FluentDefaultFormatSettings : TFormatSettings = (
-    CurrencyFormat: 1;
-    NegCurrFormat: 5;
-    ThousandSeparator: ',';
-    DecimalSeparator: '.';
-    CurrencyDecimals: 2;
-    DateSeparator: '-';
-    TimeSeparator: ':';
-    ListSeparator: ',';
-    CurrencyString: '$';
-    ShortDateFormat: 'yyyy-mm-dd';
-    LongDateFormat: 'yyyy" "mmmm" "dd';
-    TimeAMString: 'AM';
-    TimePMString: 'PM';
-    ShortTimeFormat: 'hh:nn';
-    LongTimeFormat: 'hh:nn:ss';
-    ShortMonthNames: ('Jan','Feb','Mar','Apr','May','Jun',
-                      'Jul','Aug','Sep','Oct','Nov','Dec');
-    LongMonthNames: ('January','February','March','April','May','June',
-                     'July','August','September','October','November','December');
-    ShortDayNames: ('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
-    LongDayNames:  ('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
-    TwoDigitYearCenturyWindow: 50;
-  );
-
-  FluentFormatSetting : TFormatSettings absolute FluentDefaultFormatSettings;
-
 implementation
+uses
+  hade.Utils;
 const
   CEConvertError = 'Unable to convert value to %s.';
 
-{ TFluent }
-
-function TFluent.getCount: ptrUint;
-begin
-  Result := FList.Count;
-end;
-
-function TFluent.GetCurrent: TFluentItem;
-begin
-  FList.Find(FKeyList[FCursor],Result);
-end;
-
-procedure TFluent.clear;
-begin
-  FList.Iterate(nil,@Iterate_FreeObjects);
-  FKeyList.Clear;
-  Reset;
-end;
-
-function TFluent.First: TFluentItem;
-begin
-  FCursor := 0;
-  FList.find(FKeyList[FCursor],Result);
-end;
-
-function TFluent.Last: TFluentItem;
-begin
-  FCursor := pred(FList.Count);
-  FList.find(FKeyList[FCursor],Result);
-end;
-
-function TFluent.Extract(const ItemKey: shortstring): TFluentItem;
-var
-  idx: Integer;
-begin
-  FList.Find(ItemKey,Result);
-  FList.Remove(ItemKey);
-  idx := FKeyList.IndexOf(ItemKey);
-  FKeyList.Delete( idx );
-
-  if FCursor >= idx then
-    FCursor := pred(idx);
-end;
-
-procedure TFluent.Remove(const ItemKey: shortstring);
-var
-  idx: Integer;
-begin
-  FList.Remove(ItemKey);
-  idx := FKeyList.IndexOf(ItemKey);
-  FKeyList.Delete( idx );
-
-  if FCursor >= idx then
-    FCursor := pred(idx);
-end;
-
-function TFluent.MoveNext: Boolean;
-begin
-  Result := FCursor <> pred(FList.Count);
-  if Result then
-    inc(FCursor);
-end;
-
-procedure TFluent.Reset;
-begin
-  FCursor := 0;
-end;
-
-function TFluent.Items(const AKeyName: shortstring): TFluentItem;
-begin
-  if FList.Find(AKeyName,Result) then
-  begin
-    FKeyList.Add(AKeyName);
-    exit;
-  end else
-  begin
-    Result := TFluentItem.Create(variants.Null);
-    FList.Add(AKeyName,Result);exit;
-  end;
-end;
-
-constructor TFluent.Create;
-begin
-  FList:=TStringHashMap.Create(2047,False);
-  FKeyList := TStringList.Create;
-  FCursor := 0;
-  self.Reset;
-end;
-
-destructor TFluent.Destroy;
-begin
-  self.Clear;
-  FList.Free;
-  FKeyList.Free;
-  inherited Destroy;
-end;
-
-{ TFluent }
+{$i fluentimpl.inc}
 
 { TFluentItem }
 
 function TFluentItem.getDate: TDate;
 begin
   if variants.VarIsFloat(FValue) then
-    Result := StrToDate(self.getString,FluentFormatSetting)
+    Result := StrToDate(self.getString,HadeFormatSetting)
   else
     Result := getDouble;
 end;
@@ -244,7 +79,7 @@ end;
 function TFluentItem.getDateTime: TDateTime;
 begin
   if variants.VarIsFloat(FValue) then
-    Result := StrToDateTime(self.getString,FluentFormatSetting)
+    Result := StrToDateTime(self.getString,HadeFormatSetting)
   else
     Result := getDouble;
 end;
@@ -254,7 +89,7 @@ begin
   if variants.VarIsNumeric(FValue) then
     Result := Double(FValue)
   else if variants.VarType(FValue) = vardate then
-    Result := StrToDateTime(self.getString,FluentFormatSetting)
+    Result := StrToDateTime(self.getString,HadeFormatSetting)
   else if variants.VarIsStr(FValue) then
     Result := StrToFloatDef(FValue,0)
   else
@@ -277,7 +112,7 @@ end;
 function TFluentItem.getString: string;
 begin
   if variants.VarType(FValue) = vardate then
-    Result := DateTimeToStr(FValue,FluentFormatSetting)
+    Result := DateTimeToStr(FValue,HadeFormatSetting)
   else
     Result := variants.VarToStr(FValue);
 end;
@@ -285,7 +120,7 @@ end;
 function TFluentItem.getTime: TTime;
 begin
   if variants.VarIsFloat(FValue) then
-    Result := StrToTime(self.getString,FluentFormatSetting)
+    Result := StrToTime(self.getString,HadeFormatSetting)
   else
     Result := getDouble;
 end;

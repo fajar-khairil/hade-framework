@@ -8,7 +8,7 @@ interface
 
 uses
   hade.EventDispatcher, hade.EventDispatcherIntf, hade.DiContainer, 
-  hade.CustomApp, hade.Fluent, LazarusPackageIntf;
+  hade.CustomApp, hade.Fluent, hade.Utils, LazarusPackageIntf;
 
 implementation
 

@@ -8,14 +8,15 @@ uses
   {$ENDIF}{$ENDIF}
   Classes,
   sysutils,
-  hade.Fluent
+  hade.Fluent,
+  hade.Utils
   { you can add units after this };
 
 var
   obj : TFluent;
   lDate: TDateTime;
 begin
-  lDate := sysutils.StrToDateTime('1990-03-02 11:12:03',FluentFormatSetting);
+  lDate := sysutils.StrToDateTime('1990-03-02 11:12:03',HadeDefaultFormatSettings);
   obj := TFluent.Create;
   try
     obj.Items('test').AsDateTime := lDate;
