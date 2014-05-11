@@ -16,7 +16,7 @@
         <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
-    <Files Count="3">
+    <Files Count="4">
       <Item1>
         <Filename Value="../src/Foundation/hade.eventdispatcher.pas"/>
         <UnitName Value="hade.EventDispatcher"/>
@@ -29,6 +29,10 @@
         <Filename Value="../src/Foundation/hade.dicontainer.pas"/>
         <UnitName Value="hade.DiContainer"/>
       </Item3>
+      <Item4>
+        <Filename Value="../src/Foundation/hade.customapp.pas"/>
+        <UnitName Value="hade.customapp"/>
+      </Item4>
     </Files>
     <Type Value="RunAndDesignTime"/>
     <RequiredPkgs Count="1">

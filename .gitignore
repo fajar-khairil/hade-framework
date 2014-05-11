@@ -1,8 +1,6 @@
-packages/lib
-packages/backup
+*~lib_*~
+*~backup_*~
 tests/testsuite.compiled
 *.bak
-tests/backup
 testsuite
-tests/lib
-labs
+*.exe
