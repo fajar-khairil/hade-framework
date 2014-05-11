@@ -1,5 +1,7 @@
-*~lib_*~
-*~backup_*~
+dicontainer
+EventDispatcher
+./lib
+./backup_*~
 tests/testsuite.compiled
 *.bak
 testsuite
