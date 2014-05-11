@@ -11,9 +11,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="65"/>
-        <CursorPos X="36" Y="68"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="21"/>
+        <CursorPos X="44" Y="34"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -251,7 +251,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="10" HistoryIndex="9">
       <Position1>
         <Filename Value="dicontainer.lpr"/>
         <Caret Line="78" Column="15" TopLine="58"/>
@@ -272,6 +272,26 @@
         <Filename Value="dicontainer.lpr"/>
         <Caret Line="11" Column="19" TopLine="1"/>
       </Position5>
+      <Position6>
+        <Filename Value="dicontainer.lpr"/>
+        <Caret Line="30" Column="25" TopLine="14"/>
+      </Position6>
+      <Position7>
+        <Filename Value="dicontainer.lpr"/>
+        <Caret Line="47" Column="22" TopLine="40"/>
+      </Position7>
+      <Position8>
+        <Filename Value="dicontainer.lpr"/>
+        <Caret Line="29" Column="25" TopLine="15"/>
+      </Position8>
+      <Position9>
+        <Filename Value="dicontainer.lpr"/>
+        <Caret Line="37" Column="22" TopLine="17"/>
+      </Position9>
+      <Position10>
+        <Filename Value="dicontainer.lpr"/>
+        <Caret Line="60" Column="5" TopLine="45"/>
+      </Position10>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
