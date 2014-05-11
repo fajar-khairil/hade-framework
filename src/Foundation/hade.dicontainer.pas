@@ -17,7 +17,7 @@ uses
   SysUtils,
   contnrs;
 Type
-    TProcedurePointer = Procedure(out APointer:Pointer);
+    TProcedurePointer = Procedure(out APointer:Pointer) of object;
     TContentType = (ctSingleton,ctFactory);
 
     { TContentContainer }
