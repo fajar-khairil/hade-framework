@@ -1,4 +1,5 @@
-~*.lps
+src/inc/backup
+*.lps
 labs/Fluent/lib
 dicontainer
 EventDispatcher
@@ -9,6 +10,6 @@ labs/EventDispatcher/backup
 labs/DIContainer/backup
 Fluent
 tests/testsuite.compiled
-~*.bak
+*.bak
 testsuite
-~*.exe
+*.exe

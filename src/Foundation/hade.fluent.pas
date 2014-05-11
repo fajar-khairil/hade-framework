@@ -56,6 +56,7 @@ Type
     property Value : Variant read FValue write FValue;
 
     Constructor Create(const AValue : Variant);
+    Constructor Create;overload;
   end;
 
 implementation
@@ -178,6 +179,11 @@ end;
 constructor TFluentItem.Create(const AValue: Variant);
 begin
   FValue := AValue;
+end;
+
+constructor TFluentItem.Create;
+begin
+  FValue := variants.Null;
 end;
 
 end.

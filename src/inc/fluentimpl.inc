@@ -74,7 +74,7 @@ begin
     exit;
   end else
   begin
-    Result := T.Create(variants.Null);
+    Result := T.Create;
     FList.Add(AKeyName,Result);exit;
   end;
 end;
