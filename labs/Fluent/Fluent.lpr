@@ -18,22 +18,26 @@ var
 begin
   lDate := sysutils.StrToDateTime('1990-03-02 11:12:03',HadeDefaultFormatSettings);
   obj := TFluent.Create;
+  obj.Items('birth').AsDateTime := lDate;
+  obj.Items('name').AsString := 'Fajar';
+  obj.Items('age').AsInteger := 24;
   try
-    obj.Items('test').AsDateTime := lDate;
-    obj.Items('name').AsString := 'Fajar';
-
-    WriteLn(obj.Items('test').AsString);
-    WriteLn(obj.Items('test').AsDate);
-    WriteLn(obj.Items('test').AsDateTime);
-    WriteLn(obj.Items('test').AsTime);
-    WriteLn(obj.Items('test').AsDouble);
-    WriteLn(obj.Items('test').AsInteger);
-    WriteLn(obj.Items('test').AsUInteger);
-    WriteLn(obj.Items('test').Value);
-
+    WriteLn('Property Count : ',obj.Count);
+    WriteLn('---------------------------');
+    WriteLn(obj.Items('birth').AsString);
     WriteLn(obj.Items('name').AsString);
+    WriteLn(obj.Items('age').AsString);
 
-    WriteLn(obj.Count);
+    obj.Remove('birth');
+    WriteLn('Property Count after removing birth key : ',obj.Count);
+
+    obj.Items('just').AsString:= 'Jhon';
+    WriteLn('New property added just : ',obj.Items('just').AsString);
+    WriteLn('Property Count after adding just key : ',obj.Count);
+
+    obj.clear();
+    WriteLn('Property Count after clear : ',obj.Count);
+
   finally
     //fluentObj.Free;
     obj.Free;
