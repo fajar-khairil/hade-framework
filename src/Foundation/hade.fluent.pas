@@ -14,15 +14,61 @@ interface
 uses
   Classes,
   SysUtils,
-  variants;
+  variants,
+  contnrs,
+  StrHashMap;
 Type
 
   { EFluent }
 
-  EFluent = class(Exception);
+  EFluent = class(Exception)End;
+  TFluentItem = class;
+
+  //fpc generic interface is still buggy, take clasic approach
+  {$INTERFACES CORBA}
+  IFluentEnumerator = interface
+  ['{3133BED5-AC73-4419-94C3-4691F4528DDC}']
+    function GetCurrent: TFluentItem;
+    function MoveNext: Boolean;
+    procedure Reset;
+    property Current: TFluentItem read GetCurrent;
+  end;
+
+
   { TFluent }
 
-  TFluent = class
+  TFluent = class(IFluentEnumerator)
+  private
+    function getCount: ptrUint;
+  protected
+    FCursor : ptrUint;
+    FKeyList : TStringList;
+    FList : TStringHashMap;
+
+    function GetCurrent: TFluentItem;
+  public
+    procedure clear;
+    function First: TFluentItem;
+    function Last: TFluentItem;
+    function Extract(const ItemKey:shortstring): TFluentItem;
+    procedure Remove(const ItemKey:shortstring);
+
+    property List : TStringHashMap read FList;
+    property Count : ptrUint read getCount;
+    //IEnumerator
+    function MoveNext: Boolean;
+    procedure Reset;
+    property Current: TFluentItem read GetCurrent;
+
+    function Items(const AKeyName:shortstring) : TFluentItem;
+
+    constructor Create;
+    Destructor Destroy;override;
+  end;
+
+  { TFluentItem }
+
+  TFluentItem = class
   protected
     FValue : Variant;
     function getDate: TDate;
@@ -88,7 +134,106 @@ const
 
 { TFluent }
 
-function TFluent.getDate: TDate;
+function TFluent.getCount: ptrUint;
+begin
+  Result := FList.Count;
+end;
+
+function TFluent.GetCurrent: TFluentItem;
+begin
+  FList.Find(FKeyList[FCursor],Result);
+end;
+
+procedure TFluent.clear;
+begin
+  FList.Iterate(nil,@Iterate_FreeObjects);
+  FKeyList.Clear;
+  Reset;
+end;
+
+function TFluent.First: TFluentItem;
+begin
+  FCursor := 0;
+  FList.find(FKeyList[FCursor],Result);
+end;
+
+function TFluent.Last: TFluentItem;
+begin
+  FCursor := pred(FList.Count);
+  FList.find(FKeyList[FCursor],Result);
+end;
+
+function TFluent.Extract(const ItemKey: shortstring): TFluentItem;
+var
+  idx: Integer;
+begin
+  FList.Find(ItemKey,Result);
+  FList.Remove(ItemKey);
+  idx := FKeyList.IndexOf(ItemKey);
+  FKeyList.Delete( idx );
+
+  if FCursor >= idx then
+    FCursor := pred(idx);
+end;
+
+procedure TFluent.Remove(const ItemKey: shortstring);
+var
+  idx: Integer;
+begin
+  FList.Remove(ItemKey);
+  idx := FKeyList.IndexOf(ItemKey);
+  FKeyList.Delete( idx );
+
+  if FCursor >= idx then
+    FCursor := pred(idx);
+end;
+
+function TFluent.MoveNext: Boolean;
+begin
+  Result := FCursor <> pred(FList.Count);
+  if Result then
+    inc(FCursor);
+end;
+
+procedure TFluent.Reset;
+begin
+  FCursor := 0;
+end;
+
+function TFluent.Items(const AKeyName: shortstring): TFluentItem;
+begin
+  if FList.Find(AKeyName,Result) then
+  begin
+    FKeyList.Add(AKeyName);
+    exit;
+  end else
+  begin
+    Result := TFluentItem.Create(variants.Null);
+    FList.Add(AKeyName,Result);exit;
+  end;
+end;
+
+constructor TFluent.Create;
+begin
+  FList:=TStringHashMap.Create(2047,False);
+  FKeyList := TStringList.Create;
+  FCursor := 0;
+  self.Reset;
+end;
+
+destructor TFluent.Destroy;
+begin
+  self.Clear;
+  FList.Free;
+  FKeyList.Free;
+  inherited Destroy;
+end;
+
+{ TFluent }
+
+{ TFluentItem }
+
+function TFluentItem.getDate: TDate;
 begin
   if variants.VarIsFloat(FValue) then
     Result := StrToDate(self.getString,FluentFormatSetting)
@@ -96,7 +241,7 @@ begin
     Result := getDouble;
 end;
 
-function TFluent.getDateTime: TDateTime;
+function TFluentItem.getDateTime: TDateTime;
 begin
   if variants.VarIsFloat(FValue) then
     Result := StrToDateTime(self.getString,FluentFormatSetting)
@@ -104,7 +249,7 @@ begin
     Result := getDouble;
 end;
 
-function TFluent.getDouble: Double;
+function TFluentItem.getDouble: Double;
 begin
   if variants.VarIsNumeric(FValue) then
     Result := Double(FValue)
@@ -116,7 +261,7 @@ begin
     RaiseError(Format(CEConvertError,['Double']));
 end;
 
-function TFluent.getInteger: ptrInt;
+function TFluentItem.getInteger: ptrInt;
 begin
   if (variants.VarIsNumeric(FValue)) OR (variants.VarType(FValue) = vardate) then
     Result := ptrInt(FValue)
@@ -129,7 +274,7 @@ begin
     RaiseError(Format(CEConvertError,['Integer']));
 end;
 
-function TFluent.getString: string;
+function TFluentItem.getString: string;
 begin
   if variants.VarType(FValue) = vardate then
     Result := DateTimeToStr(FValue,FluentFormatSetting)
@@ -137,7 +282,7 @@ begin
     Result := variants.VarToStr(FValue);
 end;
 
-function TFluent.getTime: TTime;
+function TFluentItem.getTime: TTime;
 begin
   if variants.VarIsFloat(FValue) then
     Result := StrToTime(self.getString,FluentFormatSetting)
@@ -145,7 +290,7 @@ begin
     Result := getDouble;
 end;
 
-function TFluent.getUInteger: ptrUint;
+function TFluentItem.getUInteger: ptrUint;
 begin
   if (variants.VarIsNumeric(FValue)) OR (variants.VarType(FValue) = vardate) then
     Result := ptrUint(FValue)
@@ -155,47 +300,47 @@ begin
     RaiseError(Format(CEConvertError,['Unsigned Integer']));
 end;
 
-procedure TFluent.setDate(AValue: TDate);
+procedure TFluentItem.setDate(AValue: TDate);
 begin
   FValue := AValue;
 end;
 
-procedure TFluent.setDateTime(AValue: TDateTime);
+procedure TFluentItem.setDateTime(AValue: TDateTime);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.setDouble(AValue: Double);
+procedure TFluentItem.setDouble(AValue: Double);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.setInteger(AValue: ptrInt);
+procedure TFluentItem.setInteger(AValue: ptrInt);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.setString(AValue: string);
+procedure TFluentItem.setString(AValue: string);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.setTime(AValue: TTime);
+procedure TFluentItem.setTime(AValue: TTime);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.setUInteger(AValue: ptrUint);
+procedure TFluentItem.setUInteger(AValue: ptrUint);
 begin
  FValue := AValue;
 end;
 
-procedure TFluent.RaiseError(const AMsg: String);
+procedure TFluentItem.RaiseError(const AMsg: String);
 begin
   raise EFluent.Create(AMsg);
 end;
 
-constructor TFluent.Create(const AValue: Variant);
+constructor TFluentItem.Create(const AValue: Variant);
 begin
   FValue := AValue;
 end;
