@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/home/fajardev/bin/fpc" Date="1399474870"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -gh -vewnhi -Fi/home/fajardev/projects/hade-framework/labs/DIContainer/lib/i386-linux -Fu/home/fajardev/projects/hade-framework/packages/lib/i386-linux -Fu/home/fajardev/lazarus/packager/units/i386-linux -Fu/home/fajardev/projects/hade-framework/labs/DIContainer/ -FU/home/fajardev/projects/hade-framework/labs/DIContainer/lib/i386-linux/ -l dicontainer.lpr"/>
-</CONFIG>

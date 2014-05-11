@@ -7,8 +7,8 @@ unit hadefoundation;
 interface
 
 uses
-  hade.EventDispatcher, hade.EventDispatcherIntf, hade.dicontainer, 
-  LazarusPackageIntf;
+  hade.EventDispatcher, hade.EventDispatcherIntf, hade.DiContainer, 
+  hade.CustomApp, hade.Fluent, LazarusPackageIntf;
 
 implementation
 

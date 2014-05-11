@@ -3,24 +3,69 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="1">
+    <Units Count="3">
       <Unit0>
         <Filename Value="Fluent.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Fluent"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
+        <CursorPos X="9" Y="12"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <UnitName Value="hade.Fluent"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="27" Y="68"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../../../fpc/packages/rtl-objpas/src/inc/variants.pp"/>
+        <UnitName Value="variants"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="94"/>
+        <CursorPos X="10" Y="94"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit2>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="0" HistoryIndex="-1"/>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="10" Column="11" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="21" Column="32" TopLine="1"/>
+      </Position2>
+      <Position3>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="40" Column="56" TopLine="18"/>
+      </Position3>
+      <Position4>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="53" Column="34" TopLine="36"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="61" Column="18" TopLine="38"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../../src/Foundation/hade.fluent.pas"/>
+        <Caret Line="76" Column="28" TopLine="63"/>
+      </Position6>
+    </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>
 </CONFIG>

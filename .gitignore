@@ -1,7 +1,12 @@
+labs/Fluent/lib
 dicontainer
 EventDispatcher
-./lib
-./backup_*~
+labs/DIContainer/lib
+labs/EventDispatcher/lib
+labs/Fluent/backup
+labs/EventDispatcher/backup
+labs/DIContainer/backup
+Fluent
 tests/testsuite.compiled
 *.bak
 testsuite
