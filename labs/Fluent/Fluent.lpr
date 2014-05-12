@@ -35,9 +35,11 @@ begin
     WriteLn('New property added just : ',obj.Items('just').AsString);
     WriteLn('Property Count after adding just key : ',obj.Count);
 
+    WriteLn('Dump as Json');
+    WriteLn(obj.DumpJson);
+
     obj.clear();
     WriteLn('Property Count after clear : ',obj.Count);
-
   finally
     //fluentObj.Free;
     obj.Free;

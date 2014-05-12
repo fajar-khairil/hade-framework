@@ -8,7 +8,9 @@ unit hade.Fluent;
  * Description : Fluent Object Interface
  * trying to mimic the ideas of Laravel(php framework) Fluent interface
  * to pascal world.
+ *
  ******************************************************************************}
+
 {$mode objfpc}{$H+}
 
 interface
@@ -17,12 +19,51 @@ uses
   Classes,
   SysUtils,
   variants,
-  StrHashMap;
+  StrHashMap,
+  fpjson;
 Type
-  {$i fluentintf.inc}
+  { EFluent }
+
+  EFluent = class(Exception)End;
+
+  { TCustom  Fluent }
+
+  { TCustomFluent }
+
+  generic TCustomFluent<T> = class
+  protected
+    FCursor : ptrUint;
+    FKeyList : TStringList;
+    FList : TStringHashMap;
+    function getCount: ptrUint;
+  public
+    procedure clear;
+    procedure Remove(const ItemKey:shortstring);
+
+    property Map : TStringHashMap read FList;
+    property PropertyCount : ptrUint read getCount;
+    property Count : ptrUint read getCount;
+
+    function Items(const AKeyName:shortstring) : T;
+
+    constructor Create;
+    Destructor Destroy;override;
+  end;
 
   TFluentItem = class;
-  TFluent = specialize TCustomFluent<TFluentItem>;
+  TFluentItemClass = class of TFluentItem;
+
+  { TFluent }
+
+  TFluent = class(specialize TCustomFluent<TFluentItem>)
+  public
+    //export as json string
+    function DumpJson:TJSONStringType;
+
+    { TODO 3 -oFajar -cFluent : implement DumpXML }
+    //function DumpXML:String;
+  end;
+
 
   { TFluentItem }
 
@@ -55,6 +96,8 @@ Type
     property AsTime : TTime read getTime write setTime;
     property Value : Variant read FValue write FValue;
 
+    function VarType : TVarType;
+
     Constructor Create(const AValue : Variant);
     Constructor Create;overload;
   end;
@@ -65,7 +108,113 @@ uses
 const
   CEConvertError = 'Unable to convert value to %s.';
 
-{$i fluentimpl.inc}
+{ TFluent }
+
+function TFluent.DumpJson: TJSONStringType;
+var
+  iloop: Integer;
+  ObjJson: TJSONObject;
+  item: TFluentItem;
+  vType: tvartype;
+begin
+  ObjJson := TJsonObject.Create();
+  try
+    for iloop:=0 to pred(FKeyList.Count) do
+    begin
+      item := TFluentItem( FList.Data[FKeyList[iloop]] );
+
+      //should i check first?
+      //if not Assigned(item) then
+      //  continue;
+
+      vType := item.VarType;
+
+      if vtype = vardate then
+      begin
+        ObjJson.Add(FKeyList[iloop],item.AsDateTime);
+        {dont wait, exit from loop!}
+        continue;
+      end
+      else if variants.VarIsFloat(item.value) then
+      begin
+        ObjJson.Add(FKeyList[iloop],item.AsDouble);
+        continue;
+      end
+      else if vType in OrdinalVarTypes then
+      begin
+        ObjJson.Add(FKeyList[iloop],item.AsInteger);
+        continue;
+      end
+      else if variants.VarIsStr(item.value) OR (vType = varstring) then
+      begin
+        ObjJson.Add(FKeyList[iloop],item.AsString);
+        continue;
+      end
+      else
+        ObjJson.Add(FKeyList[iloop],TJSONNull.Create);
+    end;{endfor}
+
+    Result := ObjJson.AsJSON;
+  finally
+    ObjJson.Free;
+  end;
+end;
+
+{ TCustomFluent }
+
+function TCustomFluent.getCount: ptrUint;
+begin
+  Result := FList.Count;
+end;
+
+procedure TCustomFluent.clear;
+begin
+  FList.Iterate(nil,@Iterate_FreeObjects);
+  FKeyList.Clear;
+end;
+
+procedure TCustomFluent.Remove(const ItemKey: shortstring);
+var
+  idx: Integer;
+  item: PData;
+begin
+  item := FList.Remove(ItemKey);
+  if Assigned(item) then
+  begin
+    T(item).Free;
+    idx := FKeyList.IndexOf(ItemKey);
+    FKeyList.Delete( idx );
+  end;
+end;
+
+function TCustomFluent.Items(const AKeyName: shortstring): T;
+begin
+  if FList.Find(AKeyName,Result) then
+  begin
+    FKeyList.Add(AKeyName);
+    exit;
+  end else
+  begin
+    Result := T.Create;
+    FList.Add(AKeyName,Result);exit;
+  end;
+end;
+
+constructor TCustomFluent.Create;
+begin
+  FList:=TStringHashMap.Create(2047,False);
+  FKeyList := TStringList.Create;
+end;
+
+destructor TCustomFluent.Destroy;
+begin
+  self.Clear;
+  FList.Free;
+  FKeyList.Free;
+  inherited Destroy;
+end;
+
+{ TCustomFluent }
 
 { TFluentItem }
 
@@ -99,7 +248,7 @@ end;
 
 function TFluentItem.getInteger: ptrInt;
 begin
-  if (variants.VarIsNumeric(FValue)) OR (variants.VarType(FValue) = vardate) then
+  if (variants.VarIsOrdinal(FValue)) then
     Result := ptrInt(FValue)
   else if Variants.VarIsStr(FValue)  then
     if not TryStrToInt(variants.VarToStr(FValue),Result) then
@@ -174,6 +323,11 @@ end;
 procedure TFluentItem.RaiseError(const AMsg: String);
 begin
   raise EFluent.Create(AMsg);
+end;
+
+function TFluentItem.VarType: TVarType;
+begin
+  Result := variants.VarType(FValue);
 end;
 
 constructor TFluentItem.Create(const AValue: Variant);

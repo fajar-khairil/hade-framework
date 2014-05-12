@@ -5,7 +5,7 @@
     <CompilerOptions>
       <Version Value="11"/>
       <SearchPaths>
-        <IncludeFiles Value="../src/inc"/>
+        <IncludeFiles Value="../src/include"/>
         <OtherUnitFiles Value="../src/Foundation;../src/Vendor"/>
         <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
